@@ -1,4 +1,4 @@
-# Portfolio — Michaël Belval
+# Huxa Conseil — Portfolio de Michaël Belval
 
 Landing page portfolio (fichier unique `index.html`, sans dépendance ni build).
 
