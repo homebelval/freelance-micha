@@ -179,10 +179,51 @@ section{padding:96px 0}
 footer{padding:40px 0;color:var(--ink-3);font-size:.85rem}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
+/* ROTATOR */
+.rot{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-weight:600;font-size:1.05rem;margin:-6px 0 22px;color:var(--ink-2)}
+.rot .word{color:var(--ink);background:var(--accent-soft);padding:4px 12px;border-radius:10px;min-height:1.9em;display:inline-flex;align-items:center}
+.rot .caret{display:inline-block;width:2px;height:1.1em;background:var(--accent-ink);margin-left:3px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+
+/* TOPICS */
+.topics{background:var(--surface);border-bottom:1px solid var(--line)}
+.topic-tabs{position:relative;display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px}
+.topic-tab{position:relative;overflow:hidden;border:1px solid var(--line);background:var(--bg);color:var(--ink);padding:12px 18px;border-radius:14px;font:600 .93rem Inter,sans-serif;cursor:pointer;display:flex;align-items:center;gap:8px;transition:border-color .2s,background .2s}
+.topic-tab:hover{border-color:var(--ink-3)}
+.topic-tab[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.topic-tab .hot{font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--accent);color:#1a1205;padding:2px 7px;border-radius:6px}
+.topic-tab .prog{position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--accent)}
+.topic-tab[aria-selected="true"] .prog.run{animation:prog var(--cycle,7s) linear forwards}
+@keyframes prog{to{width:100%}}
+.topic-panel{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;background:var(--bg);border:1px solid var(--line);border-radius:22px;padding:32px}
+.topic-panel.swap{animation:swap .45s ease}
+@keyframes swap{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.topic-panel h3{font-size:clamp(1.5rem,3vw,2rem);margin:8px 0 12px}
+.topic-panel .why{color:var(--ink-2);margin-bottom:20px}
+.topic-panel .why b{color:var(--ink)}
+.topic-kpi{display:flex;align-items:baseline;gap:12px;padding:16px 20px;border-radius:14px;background:var(--accent-soft);margin-bottom:20px}
+.topic-kpi .v{white-space:nowrap;font-family:Fraunces,serif;font-size:2.4rem;font-weight:700;line-height:1;color:var(--accent-ink)}
+.topic-kpi .l{font-size:.9rem;color:var(--ink);font-weight:500}
+.proofs{list-style:none;display:flex;flex-direction:column;gap:10px}
+.proofs li{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:.92rem;color:var(--ink-2)}
+.proofs li b{display:block;color:var(--ink);font-size:.97rem;margin-bottom:2px}
+.kw{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:22px}
+.kw span{font-size:.78rem;font-weight:600;padding:4px 10px;border-radius:999px;border:1px solid var(--line);color:var(--ink-2);background:var(--surface)}
+.project.lit{animation:lit 1.6s ease}
+@keyframes lit{0%,40%{box-shadow:0 0 0 3px var(--accent)}100%{box-shadow:0 0 0 0 transparent}}
+
+/* MARQUEE */
+.marquee{overflow:hidden;border-top:1px solid var(--line);background:var(--navy);color:#cfd4e6;padding:14px 0;white-space:nowrap;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.marquee .track{display:inline-flex;gap:36px;animation:marq 40s linear infinite;padding-left:36px}
+.marquee:hover .track{animation-play-state:paused}
+.marquee span{font-weight:600;font-size:.92rem;display:inline-flex;align-items:center;gap:36px}
+.marquee span::after{content:"✦";color:#ffb547;font-size:.7rem}
+@keyframes marq{to{transform:translateX(-50%)}}
+
 /* REVEAL */
 .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}
 .reveal.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.bar i{transition:none}html{scroll-behavior:auto}}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.bar i{transition:none}html{scroll-behavior:auto}.marquee .track,.rot .caret,.topic-panel.swap,.project.lit{animation:none}.topic-tab .prog{display:none}}
 
 /* RESPONSIVE */
 @media (max-width:960px){
@@ -191,6 +232,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   .projects{grid-template-columns:1fr 1fr}
   .exp-grid{grid-template-columns:1fr 1fr}
   .skills{grid-template-columns:1fr;gap:32px}
+  .topic-panel{grid-template-columns:1fr}
   .edu-grid{grid-template-columns:1fr 1fr}
 }
 @media (max-width:760px){
@@ -206,6 +248,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   .projects,.exp-grid,.edu-grid{grid-template-columns:1fr}
   .project.feature{grid-column:auto}
   .contact{padding:48px 22px;border-radius:20px}
+  .topic-panel{padding:22px}
+  .topic-tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0 -16px 20px;padding:2px 16px}
+  .topic-tabs::-webkit-scrollbar{display:none}
+  .topic-tab{flex:0 0 auto;padding:10px 14px;font-size:.88rem}
   .job summary{grid-template-columns:1fr auto;padding:18px}
   .job .body{padding:0 18px 18px}
   .timeline{padding-left:24px}
@@ -222,6 +268,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <a href="#top" class="logo"><span class="mark">HC</span><span>Huxa Conseil</span></a>
     <div style="display:flex;align-items:center;gap:12px">
       <ul id="menu">
+        <li><a href="#actualite">Sujets clés</a></li>
         <li><a href="#projets">Réalisations</a></li>
         <li><a href="#expertise">Expertise</a></li>
         <li><a href="#parcours">Parcours</a></li>
@@ -244,6 +291,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <div class="eyebrow" style="margin-bottom:14px">Huxa Conseil · Michaël Belval</div>
       <div class="status"><i></i> Disponible pour de nouvelles missions</div>
       <h1>Du besoin métier<br>à la <em>mise en production.</em></h1>
+      <p class="rot" aria-live="polite">Expertise&nbsp;:<span class="word"><span id="rotWord">IA générative &amp; LLM</span><span class="caret" aria-hidden="true"></span></span></p>
       <p class="lead">Chef de projet senior en transformation digitale, IA appliquée &amp; automatisation. Ingénieur informatique, 18 ans d'expérience : je fais le lien entre les métiers et la technique — et je livre.</p>
       <div class="hero-ctas">
         <a href="#projets" class="btn btn-primary">Voir mes réalisations
@@ -269,15 +317,29 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 <div class="stats">
   <div class="wrap stats-grid">
-    <div class="stat reveal"><div class="num">18<small> ans</small></div><div class="lbl">de gestion de projets</div></div>
-    <div class="stat reveal"><div class="num">95<small>%</small></div><div class="lbl">de la data métier maîtrisée, en partant de zéro</div></div>
-    <div class="stat reveal"><div class="num">~2<small> ETP</small></div><div class="lbl">de charge sans valeur ajoutée supprimés par l'IA</div></div>
-    <div class="stat reveal"><div class="num">100<small>+</small></div><div class="lbl">agents outillés par un ticketing groupe en 9 mois</div></div>
+    <div class="stat reveal"><div class="num"><span data-count="18">18</span><small> ans</small></div><div class="lbl">de gestion de projets</div></div>
+    <div class="stat reveal"><div class="num"><span data-count="95">95</span><small>%</small></div><div class="lbl">de la data métier maîtrisée, en partant de zéro</div></div>
+    <div class="stat reveal"><div class="num">~<span data-count="2">2</span><small> ETP</small></div><div class="lbl">de charge sans valeur ajoutée supprimés par l'IA</div></div>
+    <div class="stat reveal"><div class="num"><span data-count="100">100</span><small>+</small></div><div class="lbl">agents outillés par un ticketing groupe en 9 mois</div></div>
     <div class="stat reveal"><div class="num">0</div><div class="lbl">rupture de service lors d'une sortie d'ERP</div></div>
   </div>
 </div>
 
+<div class="marquee" aria-hidden="true"><div class="track"><span>IA générative</span><span>LLM</span><span>Souveraineté des données</span><span>RGPD</span><span>AI Act</span><span>Data gouvernance</span><span>KPI &amp; tableaux de bord</span><span>n8n</span><span>Power Automate</span><span>Dataiku</span><span>Low-code</span><span>Automatisation des processus</span><span>API REST</span><span>CRM</span><span>Conduite du changement</span><span>Product Ownership</span><span>Agilité</span><span>Modern workplace</span><span>IA générative</span><span>LLM</span><span>Souveraineté des données</span><span>RGPD</span><span>AI Act</span><span>Data gouvernance</span><span>KPI &amp; tableaux de bord</span><span>n8n</span><span>Power Automate</span><span>Dataiku</span><span>Low-code</span><span>Automatisation des processus</span><span>API REST</span><span>CRM</span><span>Conduite du changement</span><span>Product Ownership</span><span>Agilité</span><span>Modern workplace</span></div></div>
+
 <main>
+<section id="actualite" class="topics">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Sujets d'actualité</div>
+      <h2>Les sujets qui comptent aujourd'hui — je les ai déjà menés.</h2>
+      <p>IA, data, automatisation, souveraineté, transformation : choisissez un sujet pour voir ce que j'ai concrètement livré.</p>
+    </div>
+    <div class="topic-tabs" role="tablist" aria-label="Sujets d'actualité" id="topicTabs"></div>
+    <div class="topic-panel" role="tabpanel" id="topicPanel" aria-live="polite"></div>
+  </div>
+</section>
+
 <section id="projets">
   <div class="wrap">
     <div class="section-head reveal">
@@ -287,117 +349,119 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     </div>
     <div class="filters" role="group" aria-label="Filtrer les projets">
       <button class="chip" data-f="all" aria-pressed="true">Tous</button>
-      <button class="chip" data-f="ia" aria-pressed="false">IA &amp; Innovation</button>
-      <button class="chip" data-f="data" aria-pressed="false">Data &amp; Automatisation</button>
-      <button class="chip" data-f="si" aria-pressed="false">SI &amp; Déploiement</button>
+      <button class="chip" data-f="ia" aria-pressed="false">IA &amp; LLM</button>
+      <button class="chip" data-f="data" aria-pressed="false">Data</button>
+      <button class="chip" data-f="auto" aria-pressed="false">Automatisation</button>
+      <button class="chip" data-f="souv" aria-pressed="false">Souveraineté &amp; conformité</button>
+      <button class="chip" data-f="transfo" aria-pressed="false">Transformation digitale</button>
     </div>
     <div class="projects">
-      <article class="project feature reveal" data-cat="ia">
+      <article class="project feature reveal" id="p-dictanot" data-cat="ia transfo">
         <div class="tags"><span class="tag ia">IA</span><span class="tag">Produit</span></div>
         <h3>DICTANOT — de l'idée au marché</h3>
         <p>Conception d'un POC, industrialisation puis lancement commercial d'un nouveau produit à destination de la profession notariale. Pilotage de bout en bout, en Product Owner, avec les métiers, l'architecture et les équipes de développement.</p>
         <div class="impact">Lancement commercial en janvier 2026</div>
         <div class="ctx">ADNOV — Groupe ADSN · 2023 – aujourd'hui</div>
       </article>
-      <article class="project reveal" data-cat="data">
+      <article class="project reveal" id="p-projet-data-adnov" data-cat="data">
         <div class="tags"><span class="tag data">Data</span><span class="tag">KPI</span></div>
         <h3>Projet DATA ADNOV</h3>
         <p>Construction de la plateforme data de la filiale : collecte, transformation, KPI et tableaux de bord en production, utilisés chaque jour pour piloter l'activité.</p>
         <div class="impact">Parti de zéro → 95 % de la data métier maîtrisée</div>
         <div class="ctx">ADNOV · Dataiku, n8n, API REST</div>
       </article>
-      <article class="project reveal" data-cat="ia">
+      <article class="project reveal" id="p-poc-journal-officiel" data-cat="ia auto">
         <div class="tags"><span class="tag ia">IA</span><span class="tag">Regex + LLM</span></div>
         <h3>POC Journal Officiel</h3>
         <p>Analyse automatique des publications du Journal Officiel en couplant expressions régulières et IA, validée par le métier.</p>
         <div class="impact">≈ 2 ETP de tâches sans valeur ajoutée allégés</div>
         <div class="ctx">ADNOV · IA appliquée</div>
       </article>
-      <article class="project reveal" data-cat="ia data">
+      <article class="project reveal" id="p-souverainet-des-donn-es" data-cat="souv ia data">
         <div class="tags"><span class="tag ia">IA</span><span class="tag data">Data</span></div>
         <h3>Souveraineté des données</h3>
         <p>Tout le périmètre data et IA traité en interne — collecte, transformation, modèles — sans aucune exposition vers des services tiers.</p>
         <div class="impact">IA conforme aux exigences de confidentialité</div>
         <div class="ctx">ADNOV · Architecture data &amp; IA</div>
       </article>
-      <article class="project reveal" data-cat="data si">
+      <article class="project reveal" id="p-r-f-rentiel-client" data-cat="data auto">
         <div class="tags"><span class="tag data">Automatisation</span><span class="tag si">ERP</span></div>
         <h3>Référentiel Client V1 &amp; V2</h3>
         <p>Génération automatique des codes clients, synchronisation CRM, export vers Dynamics 365 et automatisation de la facturation.</p>
         <div class="impact">Chaîne client → facturation automatisée</div>
         <div class="ctx">ADNOV · CRM, D365, API</div>
       </article>
-      <article class="project reveal" data-cat="si">
+      <article class="project reveal" id="p-d-sengagement-adonix" data-cat="transfo data">
         <div class="tags"><span class="tag si">Migration</span><span class="tag">Processus</span></div>
         <h3>Désengagement Adonix</h3>
         <p>Sortie complète de l'ERP Adonix pour les activités DPO et Service Client : reprise des données et refonte des processus.</p>
         <div class="impact">Zéro rupture de service</div>
         <div class="ctx">ADNOV · Reprise de données</div>
       </article>
-      <article class="project reveal" data-cat="data">
+      <article class="project reveal" id="p-industrialisation-de-la-cha-ne-dpo" data-cat="auto souv">
         <div class="tags"><span class="tag data">Automatisation</span><span class="tag">RGPD</span></div>
         <h3>Industrialisation de la chaîne DPO</h3>
         <p>Prise de rendez-vous, enquêtes de satisfaction, CRM et facturation ; déploiement de la plateforme SMART GDPR.</p>
         <div class="impact">Processus DPO de bout en bout outillé</div>
         <div class="ctx">ADNOV · Power Automate, Plumsail</div>
       </article>
-      <article class="project reveal" data-cat="data">
+      <article class="project reveal" id="p-d-mat-rialisation-de-la-facture-client" data-cat="auto data">
         <div class="tags"><span class="tag data">Automatisation</span><span class="tag si">ERP</span></div>
         <h3>Dématérialisation de la facture client</h3>
         <p>Extraction automatisée, intégration au référentiel client et au processus ERP.</p>
         <div class="impact">Zéro traitement manuel</div>
         <div class="ctx">ADNOV</div>
       </article>
-      <article class="project reveal" data-cat="si">
+      <article class="project reveal" id="p-adsn-direct" data-cat="transfo">
         <div class="tags"><span class="tag si">Déploiement</span><span class="tag">Ticketing</span></div>
         <h3>ADSN Direct (Freshdesk)</h3>
         <p>Ticketing à l'échelle du groupe : plus d'une centaine d'agents en back-office et toute la population notariale en front.</p>
         <div class="impact">Lancé en janvier, en production en septembre</div>
         <div class="ctx">Groupe ADSN · 2021</div>
       </article>
-      <article class="project reveal" data-cat="si">
+      <article class="project reveal" id="p-crm-groupe" data-cat="transfo">
         <div class="tags"><span class="tag si">CRM</span><span class="tag">Décommissionnement</span></div>
         <h3>CRM groupe (Freshsales)</h3>
         <p>Cadrage, pilotage et déploiement du premier pan du CRM groupe lors du décommissionnement de l'ancien ERP.</p>
         <div class="impact">Quasi-totalité des besoins métier couverts</div>
         <div class="ctx">Groupe ADSN · 2021 – 2023</div>
       </article>
-      <article class="project reveal" data-cat="ia">
+      <article class="project reveal" id="p-base-de-r-f-rence-immobili-re" data-cat="ia">
         <div class="tags"><span class="tag ia">Deep learning</span><span class="tag">ROI</span></div>
         <h3>Base de référence immobilière</h3>
         <p>Remplacement d'un outil coûteux et peu évolutif par une solution de deep learning : extraction et correction automatique de concepts textuels.</p>
         <div class="impact">ROI mesuré, solution déployée dans le groupe</div>
         <div class="ctx">Pôle Innovation ADSN · 2018 – 2020</div>
       </article>
-      <article class="project reveal" data-cat="si ia">
+      <article class="project reveal" id="p-microsoft-365" data-cat="transfo souv">
         <div class="tags"><span class="tag si">Modern workplace</span><span class="tag">Sécurité</span></div>
         <h3>Microsoft 365 &amp; Teams</h3>
         <p>Instance pilote sécurisée (DLP, MFA, bonnes pratiques), puis définition du périmètre fonctionnel, technique et sécurité du déploiement groupe.</p>
         <div class="impact">Base de la migration de tout le groupe</div>
         <div class="ctx">Groupe ADSN · 2018 – 2023</div>
       </article>
-      <article class="project reveal" data-cat="ia si">
+      <article class="project reveal" id="p-crm-notarial" data-cat="transfo ia">
         <div class="tags"><span class="tag ia">POC</span><span class="tag si">CRM</span></div>
         <h3>CRM notarial (Salesforce)</h3>
         <p>Étude et POC démontrant l'interconnexion avec les outils de production métier.</p>
         <div class="impact">POC basculé en projet de mise en production</div>
         <div class="ctx">Pôle Innovation ADSN</div>
       </article>
-      <article class="project reveal" data-cat="si">
+      <article class="project reveal" id="p-migration-jira" data-cat="transfo">
         <div class="tags"><span class="tag si">Cloud</span><span class="tag">Agile</span></div>
         <h3>Migration Jira &amp; Confluence</h3>
         <p>Passage de l'on-premise au cloud pour toute la direction technique, avec structuration des backlogs PO/PM et de la roadmap.</p>
         <div class="impact">Direction technique outillée en agile</div>
         <div class="ctx">Groupe ADSN · Atlassian</div>
       </article>
-      <article class="project reveal" data-cat="si">
+      <article class="project reveal" id="p-tagpass" data-cat="transfo">
         <div class="tags"><span class="tag si">Mobile</span><span class="tag">Équipe de 6</span></div>
         <h3>Tag&amp;Pass — billettique mobile</h3>
         <p>Validation post-paiement par smartphone (Android, iOS, serveur de gestion) pour un opérateur de transport public. Encadrement de l'équipe et d'un sous-traitant iOS.</p>
         <div class="impact">Spécifications, IHM, recette sur site client</div>
         <div class="ctx">Cityway (Groupe Transdev) · 2015</div>
       </article>
-      <article class="project reveal" data-cat="si">
+      <article class="project reveal" id="p-vid-oprotection" data-cat="">
         <div class="tags"><span class="tag si">Infrastructure</span><span class="tag">Transport</span></div>
         <h3>Vidéoprotection — Ligne 14</h3>
         <p>Refonte complète de la vidéoprotection sur l'ensemble du matériel roulant et transmission de données de l'embarqué vers le sol ; rédaction du DCE.</p>
@@ -668,26 +732,130 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   var nav=document.getElementById('nav');
   addEventListener('scroll',function(){nav.classList.toggle('scrolled',scrollY>8);},{passive:true});
 
-  document.querySelectorAll('.chip').forEach(function(c){
-    c.addEventListener('click',function(){
-      document.querySelectorAll('.chip').forEach(function(x){x.setAttribute('aria-pressed','false');});
-      c.setAttribute('aria-pressed','true');
-      var f=c.dataset.f;
-      document.querySelectorAll('.project').forEach(function(p){
-        var show=f==='all'||p.dataset.cat.split(' ').indexOf(f)>-1;
-        p.classList.toggle('hidden',!show);
-        p.classList.toggle('feature',show&&f==='all'&&p.querySelector('h3').textContent.indexOf('DICTANOT')===0);
-      });
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function filterProjects(f){
+    document.querySelectorAll('.chip').forEach(function(x){x.setAttribute('aria-pressed',String(x.dataset.f===f));});
+    document.querySelectorAll('.project').forEach(function(p){
+      var show=f==='all'||p.dataset.cat.split(' ').indexOf(f)>-1;
+      p.classList.toggle('hidden',!show);
+      p.classList.toggle('feature',show&&f==='all'&&p.id==='p-dictanot');
+      if(show)p.classList.add('in');
     });
+  }
+  document.querySelectorAll('.chip').forEach(function(c){
+    c.addEventListener('click',function(){filterProjects(c.dataset.f);});
   });
+
+  /* Rotating expertise word */
+  var words=['IA générative & LLM','Data & pilotage','Automatisation des processus','Souveraineté des données','Transformation digitale','Product Ownership'];
+  var rw=document.getElementById('rotWord'),wi=0;
+  if(!reduce){
+    (function cycle(){
+      var target=words[wi=(wi+1)%words.length],cur=rw.textContent;
+      (function del(){
+        if(cur.length){cur=cur.slice(0,-1);rw.textContent=cur;setTimeout(del,28);}
+        else (function type(i){rw.textContent=target.slice(0,i);if(i<target.length)setTimeout(function(){type(i+1);},55);else setTimeout(cycle,2200);})(1);
+      })();
+    })();
+  }
+
+  /* Animated counters */
+  function count(el){
+    var to=+el.dataset.count;if(reduce){el.textContent=to;return;}
+    var t0=null,d=1400;
+    (function step(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/d);el.textContent=Math.round(to*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(step);})(performance.now());
+  }
+
+  /* Topics explorer */
+  var TOPICS=[
+    {id:'ia',label:'IA générative & LLM',hot:true,
+     why:"Les entreprises passent des démos aux <b>usages en production</b>. L'enjeu n'est plus de tester l'IA, mais de l'industrialiser avec un <b>ROI mesurable</b> et une donnée maîtrisée.",
+     kpi:['~2 ETP','de tâches sans valeur ajoutée allégés par un POC IA validé par le métier'],
+     kw:['LLM','Regex + IA','Deep learning','POC → production','ROI'],
+     proofs:[['DICTANOT','De l\'idée au marché : POC, industrialisation et lancement commercial en janvier 2026.','p-dictanot'],
+             ['POC Journal Officiel','Analyse automatique des publications (regex + IA), validée par le métier.','p-poc-journal-officiel'],
+             ['Base de référence immobilière','Deep learning en remplacement d\'un outil coûteux — ROI mesuré, déployé dans le groupe.','p-base-de-r-f-rence-immobili-re'],
+             ['Savoir dire non','Deux études IA arrêtées au stade préliminaire : ROI estimé trop faible.',null]]},
+    {id:'souv',label:'Souveraineté & conformité',hot:true,
+     why:"RGPD, <b>AI Act européen</b>, données sensibles : la question n'est plus seulement « que peut faire l'IA ? » mais « <b>où vont nos données ?</b> ».",
+     kpi:['0','exposition de données vers des services tiers sur le périmètre data & IA'],
+     kw:['RGPD','AI Act','DLP / MFA','IA on-premise','DPO'],
+     proofs:[['Souveraineté des données','Collecte, transformation et modèles traités en interne, sans service tiers.','p-souverainet-des-donn-es'],
+             ['Chaîne DPO industrialisée','Plateforme SMART GDPR, prise de RDV, enquêtes, CRM et facturation.','p-industrialisation-de-la-cha-ne-dpo'],
+             ['Microsoft 365 sécurisé','Instance pilote DLP / MFA qui a servi de base à la migration du groupe.','p-microsoft-365']]},
+    {id:'data',label:'Data & pilotage',
+     why:"Sans donnée fiable, pas d'IA utile ni de pilotage. Le vrai chantier : <b>référentiels, qualité et KPI</b> utilisés au quotidien.",
+     kpi:['95 %','de la data métier maîtrisée, en partant de zéro'],
+     kw:['ETL','Référentiels','KPI','Dataiku','Tableaux de bord'],
+     proofs:[['Projet DATA ADNOV','KPI et tableaux de bord en production, utilisés chaque jour pour piloter l\'activité.','p-projet-data-adnov'],
+             ['Référentiel Client V1 & V2','Codes clients automatiques, synchro CRM, export Dynamics 365.','p-r-f-rentiel-client'],
+             ['Sortie d\'ERP Adonix','Reprise complète des données et refonte des processus.','p-d-sengagement-adonix']]},
+    {id:'auto',label:'Automatisation & low-code',hot:true,
+     why:"n8n, Power Automate, agents IA : automatiser les processus répétitifs est devenu <b>accessible et rapide</b> — à condition de bien les urbaniser.",
+     kpi:['0','traitement manuel sur la chaîne de facturation client'],
+     kw:['n8n','Power Automate','API REST','Low-code','Dev assisté par IA'],
+     proofs:[['Dématérialisation de la facture client','Extraction automatisée, intégration au référentiel et à l\'ERP.','p-d-mat-rialisation-de-la-facture-client'],
+             ['Chaîne DPO','Rendez-vous, enquêtes de satisfaction, CRM et facturation automatisés.','p-industrialisation-de-la-cha-ne-dpo'],
+             ['Référentiel client','Facturation automatisée de bout en bout.','p-r-f-rentiel-client']]},
+    {id:'transfo',label:'Transformation digitale',
+     why:"Les outils ne suffisent pas : la réussite tient à l'<b>adoption</b>. Cadrage, conduite du changement et pilotage des éditeurs font la différence.",
+     kpi:['100+','agents outillés par un ticketing groupe, en production en 9 mois'],
+     kw:['CRM','Ticketing','Modern workplace','Conduite du changement','Agilité'],
+     proofs:[['ADSN Direct (Freshdesk)','Ticketing pour 100+ agents et toute la population notariale.','p-adsn-direct'],
+             ['CRM groupe & sortie d\'ERP','Premier pan du CRM groupe, zéro rupture de service à la sortie d\'Adonix.','p-crm-groupe'],
+             ['Jira & Confluence cloud','Migration de toute la direction technique, backlogs et roadmap structurés.','p-migration-jira']]}
+  ];
+  var tabs=document.getElementById('topicTabs'),panel=document.getElementById('topicPanel'),cur=0,timer=null,CYCLE=7000,userPicked=false,visible=false;
+  function esc(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+  TOPICS.forEach(function(t,i){
+    var b=document.createElement('button');b.className='topic-tab';b.setAttribute('role','tab');b.id='tab-'+t.id;
+    b.innerHTML=esc(t.label)+(t.hot?' <span class="hot">Tendance</span>':'')+'<span class="prog"></span>';
+    b.addEventListener('click',function(){userPicked=true;show(i);});
+    tabs.appendChild(b);
+  });
+  function show(i){
+    cur=i;var t=TOPICS[i];
+    tabs.querySelectorAll('.topic-tab').forEach(function(b,j){
+      b.setAttribute('aria-selected',String(j===i));b.tabIndex=j===i?0:-1;
+      var pr=b.querySelector('.prog');pr.classList.remove('run');void pr.offsetWidth;
+      if(j===i&&!userPicked&&!reduce&&visible)pr.classList.add('run');
+    });
+    var ab=tabs.children[i];if(tabs.scrollWidth>tabs.clientWidth)tabs.scrollTo({left:ab.offsetLeft-16,behavior:reduce?'auto':'smooth'});
+    panel.setAttribute('aria-labelledby','tab-'+t.id);
+    panel.innerHTML='<div><div class="eyebrow">Pourquoi c\'est d\'actualité</div><h3>'+esc(t.label)+'</h3><p class="why">'+t.why+'</p>'
+      +'<div class="kw">'+t.kw.map(function(k){return '<span>'+esc(k)+'</span>';}).join('')+'</div>'
+      +'<div class="topic-kpi"><span class="v">'+esc(t.kpi[0])+'</span><span class="l">'+esc(t.kpi[1])+'</span></div>'
+      +'<a href="#projets" class="btn btn-primary" data-go="'+t.id+'">Voir les projets liés →</a></div>'
+      +'<div><div class="eyebrow" style="margin-bottom:12px">Ce que j\'ai livré</div><ul class="proofs">'
+      +t.proofs.map(function(p){return '<li><b>'+esc(p[0])+'</b>'+esc(p[1])+'</li>';}).join('')+'</ul></div>';
+    panel.classList.remove('swap');void panel.offsetWidth;panel.classList.add('swap');
+    panel.querySelector('[data-go]').addEventListener('click',function(e){
+      e.preventDefault();userPicked=true;clearTimeout(timer);filterProjects(t.id);
+      document.getElementById('projets').scrollIntoView({behavior:reduce?'auto':'smooth'});
+      document.querySelectorAll('.project:not(.hidden)').forEach(function(p){p.classList.remove('lit');void p.offsetWidth;p.classList.add('lit');});
+    });
+    clearTimeout(timer);
+    if(!userPicked&&!reduce&&visible)timer=setTimeout(function(){show((cur+1)%TOPICS.length);},CYCLE);
+  }
+  tabs.addEventListener('keydown',function(e){
+    var k=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(!k)return;
+    userPicked=true;var n=(cur+k+TOPICS.length)%TOPICS.length;show(n);tabs.children[n].focus();
+  });
+  tabs.style.setProperty('--cycle',CYCLE+'ms');
+  show(0);
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(es){es.forEach(function(e){visible=e.isIntersecting;if(!userPicked)show(cur);else clearTimeout(timer);});},{threshold:.35}).observe(document.getElementById('actualite'));
+  }
 
   var io='IntersectionObserver' in window?new IntersectionObserver(function(es){
     es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');
       e.target.querySelectorAll('.bar i').forEach(function(b){b.style.width=b.dataset.w+'%';});
+      e.target.querySelectorAll('[data-count]').forEach(count);
       io.unobserve(e.target);}});
   },{threshold:.12}):null;
   document.querySelectorAll('.reveal').forEach(function(el){
-    if(io)io.observe(el);else{el.classList.add('in');el.querySelectorAll('.bar i').forEach(function(b){b.style.width=b.dataset.w+'%';});}
+    if(io)io.observe(el);else{el.classList.add('in');el.querySelectorAll('.bar i').forEach(function(b){b.style.width=b.dataset.w+'%';});el.querySelectorAll('[data-count]').forEach(function(c){c.textContent=c.dataset.count;});}
   });
   document.getElementById('yr').textContent=new Date().getFullYear();
 })();
