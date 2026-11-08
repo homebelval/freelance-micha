@@ -12,7 +12,14 @@
 <meta property="og:url" content="https://conseil.huxa.io/">
 <link rel="canonical" href="https://conseil.huxa.io/">
 <meta property="og:locale" content="fr_FR">
+<meta property="og:image" content="https://conseil.huxa.io/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Huxa Conseil — Michaël Belval, du besoin métier à la mise en production">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://conseil.huxa.io/og-image.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f1b3d'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='26' font-weight='700' fill='%23ffb547' text-anchor='middle'%3EHC%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Huxa Conseil", "url": "https://conseil.huxa.io/", "image": "https://conseil.huxa.io/og-image.jpg", "email": "michael.belval@huxa.io", "areaServed": ["Provence-Alpes-Côte d'Azur", "France"], "address": {"@type": "PostalAddress", "addressLocality": "Lauris", "postalCode": "84360", "addressRegion": "Provence-Alpes-Côte d'Azur", "addressCountry": "FR"}, "founder": {"@type": "Person", "name": "Michaël Belval", "jobTitle": "Chef de projet senior — Transformation digitale, IA & Automatisation", "image": "https://conseil.huxa.io/photo.jpg", "sameAs": ["https://www.linkedin.com/in/micha%C3%ABl-belval-90940841/"], "alumniOf": "ISEN Toulon", "knowsAbout": ["Intelligence artificielle", "IA générative", "Data", "Automatisation des processus", "Transformation digitale", "Gestion de projet", "Product Ownership"]}, "knowsAbout": ["IA générative", "Souveraineté des données", "Automatisation", "Data", "Transformation digitale"]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Quels sont vos tarifs ?", "acceptedAnswer": {"@type": "Answer", "text": "Cela dépend du format : un forfait pour un diagnostic ou une automatisation au périmètre bien défini, un taux journalier pour une mission de chef de projet ou de Product Owner en régie. Je vous fais une proposition chiffrée après un premier échange de 30 minutes."}}, {"@type": "Question", "name": "Où intervenez-vous ?", "acceptedAnswer": {"@type": "Answer", "text": "Sur site en région PACA (Aix-en-Provence, Avignon, Marseille et alentours) et en télétravail partout ailleurs. Les deux se combinent très bien."}}, {"@type": "Question", "name": "À temps plein ou à temps partiel ?", "acceptedAnswer": {"@type": "Answer", "text": "Les deux sont possibles : une mission à temps plein, ou quelques jours par semaine pour piloter un projet aux côtés de vos équipes."}}, {"@type": "Question", "name": "Comment protégez-vous nos données ?", "acceptedAnswer": {"@type": "Answer", "text": "La confidentialité fait partie de ma façon de travailler : j'ai conçu des projets data et IA traités entièrement en interne, sans exposition à des services tiers. Un accord de confidentialité peut être signé dès le premier échange."}}, {"@type": "Question", "name": "Travaillez-vous avec des PME ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Le diagnostic IA & Data et l'automatisation des processus sont pensés pour aller vite, avec un périmètre adapté à votre taille et à votre budget."}}, {"@type": "Question", "name": "Dans quels secteurs avez-vous travaillé ?", "acceptedAnswer": {"@type": "Answer", "text": "Legaltech et notariat, défense, télécoms, transport public et retail. La méthode — partir du besoin métier, prouver la valeur, industrialiser — se transpose à tous les secteurs."}}, {"@type": "Question", "name": "Comment démarrer ?", "acceptedAnswer": {"@type": "Answer", "text": "Le plus simple : réservez un appel de 30 minutes. On fait le point sur votre besoin et je vous propose le format le plus adapté, sans engagement."}}]}]</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -142,6 +149,43 @@ section{padding:96px 0}
 .offer .btn{align-self:flex-start}
 .offers-note{margin-top:18px;font-size:.85rem;color:var(--ink-3)}
 
+/* METHODE */
+.method{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:step}
+.method::before{content:"";position:absolute;left:12%;right:12%;top:31px;height:2px;background:var(--line)}
+.method::after{content:"";position:absolute;left:12%;top:31px;height:2px;width:0;background:var(--accent);transition:width 1.6s cubic-bezier(.2,.7,.2,1) .2s}
+.method.in::after{width:76%}
+.step{position:relative;text-align:center;padding:0 6px}
+.step .dot{width:64px;height:64px;margin:0 auto 18px;border-radius:50%;background:var(--surface);border:2px solid var(--line);display:grid;place-items:center;color:var(--accent-ink);position:relative;z-index:1;transition:border-color .4s,background .4s,transform .4s}
+.method.in .step .dot{border-color:var(--accent);background:var(--accent-soft)}
+.method.in .step:nth-child(1) .dot{transition-delay:.2s}.method.in .step:nth-child(2) .dot{transition-delay:.6s}.method.in .step:nth-child(3) .dot{transition-delay:1s}.method.in .step:nth-child(4) .dot{transition-delay:1.4s}
+.step .k{font:700 .75rem Inter,sans-serif;letter-spacing:.14em;color:var(--ink-3);text-transform:uppercase}
+.step h3{font-size:1.35rem;margin:4px 0 8px}
+.step p{color:var(--ink-2);font-size:.93rem}
+.step .ex{margin-top:12px;font-size:.84rem;color:var(--ink-2);background:var(--surface);border:1px dashed var(--line);border-radius:12px;padding:10px 12px;text-align:left}
+.step .ex b{color:var(--ink)}
+
+/* CALCULATEUR */
+.calc{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.calc-box{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:stretch}
+.calc-in{background:var(--bg);border:1px solid var(--line);border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:22px}
+.field label{display:flex;justify-content:space-between;gap:12px;font-weight:600;font-size:.95rem;margin-bottom:10px}
+.field label output{font-family:Fraunces,serif;font-size:1.15rem;color:var(--accent-ink);white-space:nowrap}
+.field small{display:block;color:var(--ink-3);font-size:.8rem;margin-top:6px}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:99px;background:linear-gradient(90deg,var(--accent) var(--pct,50%),var(--surface-2) var(--pct,50%));outline-offset:6px;cursor:pointer}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:var(--surface);border:3px solid var(--accent);box-shadow:var(--shadow)}
+input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:var(--surface);border:3px solid var(--accent)}
+.calc-out{background:var(--navy);color:#e9ecf6;border-radius:22px;padding:32px;display:flex;flex-direction:column;gap:18px;position:relative;overflow:hidden}
+.calc-out::before{content:"";position:absolute;width:300px;height:300px;right:-120px;top:-120px;border-radius:50%;background:radial-gradient(circle,rgba(255,181,71,.3),transparent 70%)}
+.calc-out .eyebrow{color:#ffb547}
+.big{font-family:Fraunces,serif;font-size:clamp(2.6rem,6vw,3.6rem);font-weight:700;color:#fff;line-height:1}
+.big small{font-size:.4em;color:#ffb547;margin-left:6px}
+.calc-sub{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.calc-sub div{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:14px}
+.calc-sub b{display:block;font-family:Fraunces,serif;font-size:1.6rem;color:#fff}
+.calc-sub span{font-size:.85rem;color:#b9bfd6}
+.calc-out .calc-note{font-size:.8rem;color:#8f96b3;margin-top:auto}
+.calc-out .btn{align-self:flex-start;position:relative}
+
 /* EXPERTISE */
 .expertise{background:var(--surface)}
 .exp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
@@ -189,6 +233,79 @@ section{padding:96px 0}
 .edu p{color:var(--ink-2);font-size:.9rem}
 .extras{display:flex;gap:40px;flex-wrap:wrap;margin-top:32px;color:var(--ink-2);font-size:.95rem}
 .extras b{color:var(--ink);display:block;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px}
+
+/* HORS BUREAU */
+.life{display:grid;grid-template-columns:320px 1fr;gap:40px;align-items:center;margin-top:56px;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:28px}
+.life img{width:100%;height:380px;object-fit:cover;object-position:60% 40%;border-radius:18px;filter:grayscale(1) contrast(1.05)}
+.life h3{font-size:1.7rem;margin:8px 0 12px}
+.life p{color:var(--ink-2);margin-bottom:20px}
+.hobbies{display:flex;flex-wrap:wrap;gap:10px}
+.hobbies span{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:14px;background:var(--bg);border:1px solid var(--line);font-weight:600;font-size:.93rem;transition:transform .2s}
+.hobbies span:hover{transform:translateY(-2px) rotate(-1deg)}
+
+/* RECOMMANDATIONS */
+.quotes{position:relative;max-width:820px;margin:0 auto;text-align:center}
+.quote{display:none}.quote.on{display:block;animation:swap .5s ease}
+.quote blockquote{font-family:Fraunces,serif;font-size:clamp(1.3rem,3vw,1.8rem);line-height:1.35;margin-bottom:20px}
+.quote cite{font-style:normal;color:var(--ink-2)}
+.quote cite b{color:var(--ink)}
+.qdots{display:flex;gap:8px;justify-content:center;margin-top:24px}
+.qdots button{width:10px;height:10px;border-radius:50%;border:0;background:var(--line);cursor:pointer;padding:0}
+.qdots button[aria-current="true"]{background:var(--accent);width:28px;border-radius:99px}
+
+/* FAQ */
+.faq{max-width:820px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:20px 40px 20px 0;font-weight:600;font-size:1.05rem;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:4px;top:50%;transform:translateY(-50%);font-size:1.5rem;font-weight:400;color:var(--accent-ink);transition:transform .2s}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+.faq details p{color:var(--ink-2);padding:0 40px 22px 0}
+
+/* NOTES */
+.notes{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.note{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px;text-decoration:none;display:flex;flex-direction:column;gap:10px;transition:transform .2s,box-shadow .2s}
+.note:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.note .t{font-size:.78rem;font-weight:600;color:var(--accent-ink);letter-spacing:.06em;text-transform:uppercase}
+.note h3{font-size:1.3rem}
+.note p{color:var(--ink-2);font-size:.93rem;flex:1}
+.note .more{font-weight:600;font-size:.9rem}
+
+/* ASSISTANT */
+.bot-btn{position:fixed;right:20px;bottom:20px;z-index:60;display:flex;align-items:center;gap:8px;background:var(--navy);color:#fff;border:0;border-radius:999px;padding:13px 18px;font:600 .92rem Inter,sans-serif;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.25);transition:transform .2s}
+.bot-btn:hover{transform:translateY(-2px)}
+.bot-btn i{width:9px;height:9px;border-radius:50%;background:#2fa36b;box-shadow:0 0 0 3px rgba(47,163,107,.3)}
+.bot{position:fixed;right:20px;bottom:84px;z-index:61;width:min(380px,calc(100vw - 32px));max-height:min(560px,calc(100vh - 120px));background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:0 20px 50px rgba(0,0,0,.25);display:flex;flex-direction:column;overflow:hidden}
+.bot[hidden]{display:none}
+.bot header{background:var(--navy);color:#fff;padding:16px 18px;display:flex;align-items:center;gap:12px}
+.bot header img{width:38px;height:38px;border-radius:50%;object-fit:cover}
+.bot header b{display:block;font-size:.95rem}
+.bot header span{font-size:.78rem;color:#b9bfd6}
+.bot header button{margin-left:auto;background:none;border:0;color:#fff;font-size:1.4rem;cursor:pointer;line-height:1}
+.bot header,.bot .sugg,.bot form{flex-shrink:0}
+.bot .log{flex:1;min-height:120px;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px}
+.msg{max-width:88%;padding:10px 14px;border-radius:16px;font-size:.9rem;line-height:1.5}
+.msg.b{background:var(--bg);border:1px solid var(--line);border-bottom-left-radius:4px;align-self:flex-start}
+.msg.u{background:var(--accent);color:#1a1205;border-bottom-right-radius:4px;align-self:flex-end}
+.msg a{color:var(--accent-ink);font-weight:600}
+.sugg{display:flex;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:thin;gap:6px;padding:4px 16px 12px}
+.sugg button{flex:0 0 auto;white-space:nowrap;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:6px 12px;font:500 .8rem Inter,sans-serif;cursor:pointer}
+.sugg button:hover{border-color:var(--accent)}
+.bot form{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line)}
+.bot input{flex:1;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:12px;padding:10px 12px;font:inherit;font-size:.9rem;min-width:0}
+.bot form button{border:0;background:var(--accent);color:#1a1205;border-radius:12px;padding:0 14px;font-weight:700;cursor:pointer}
+
+/* SPOTLIGHT + HERO GLOW */
+@media (hover:hover) and (pointer:fine){
+  .project,.offer,.exp,.note,.edu{background-image:radial-gradient(400px circle at var(--mx,-999px) var(--my,-999px),color-mix(in srgb,var(--accent) 12%,transparent),transparent 60%)}
+}
+.hero{overflow:hidden;isolation:isolate}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;filter:blur(70px);opacity:.45;z-index:-1;pointer-events:none}
+.hero::before{width:420px;height:420px;background:var(--accent-soft);left:-120px;top:-80px;animation:float1 18s ease-in-out infinite alternate}
+.hero::after{width:360px;height:360px;background:var(--blue-soft);right:-80px;bottom:-120px;animation:float2 22s ease-in-out infinite alternate}
+@keyframes float1{to{transform:translate(160px,90px) scale(1.15)}}
+@keyframes float2{to{transform:translate(-140px,-60px) scale(1.2)}}
+.hero .wrap{position:relative;z-index:1}
 
 /* CONTACT */
 .contact{background:var(--navy);color:#e9ecf6;border-radius:28px;padding:64px 48px;position:relative;overflow:hidden;text-align:center}
@@ -246,7 +363,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 /* REVEAL */
 .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}
 .reveal.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.bar i{transition:none}html{scroll-behavior:auto}.marquee .track,.rot .caret,.topic-panel.swap,.project.lit{animation:none}.topic-tab .prog{display:none}}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.bar i{transition:none}html{scroll-behavior:auto}.marquee .track,.rot .caret,.topic-panel.swap,.project.lit,.hero::before,.hero::after,.quote.on{animation:none}.method::after,.step .dot{transition:none}.topic-tab .prog{display:none}}
 
 /* RESPONSIVE */
 @media (max-width:960px){
@@ -258,16 +375,30 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   .topic-panel{grid-template-columns:1fr}
   .offers{grid-template-columns:1fr}
   .edu-grid{grid-template-columns:1fr 1fr}
+  .calc-box{grid-template-columns:1fr}
+  .method{grid-template-columns:1fr 1fr;row-gap:36px}
+  .method::before,.method::after{display:none}
+  .notes{grid-template-columns:1fr}
+  .life{grid-template-columns:1fr}
+  .life img{height:320px}
 }
-@media (max-width:760px){
-  .wrap{padding:0 16px}
-  section{padding:64px 0}
-  .nav ul{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:8px 16px 16px}
+@media (max-width:1100px){
+  .nav ul{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:8px 24px 16px}
   .nav ul.open{display:flex}
   .nav ul li a{display:block;padding:12px 0}
   .nav ul .btn{justify-content:center;margin-top:8px}
   .menu-toggle{display:block}
+}
+@media (max-width:760px){
+  .wrap{padding:0 16px}
+  section{padding:64px 0}
+  .nav ul{padding:8px 16px 16px}
   .hero{padding:40px 0 56px}
+  .method{grid-template-columns:1fr}
+  .calc-in,.calc-out{padding:22px}
+  .life{padding:18px;gap:24px}
+  .bot-btn{right:16px;bottom:16px}
+  .bot{right:16px;bottom:76px}
   .stats-grid{grid-template-columns:1fr 1fr}
   .projects,.exp-grid,.edu-grid{grid-template-columns:1fr}
   .project.feature{grid-column:auto}
@@ -293,11 +424,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div style="display:flex;align-items:center;gap:12px">
       <ul id="menu">
         <li><a href="#actualite">Sujets clés</a></li>
+        <li><a href="#methode">Méthode</a></li>
         <li><a href="#offres">Offres</a></li>
         <li><a href="#projets">Réalisations</a></li>
-        <li><a href="#expertise">Expertise</a></li>
         <li><a href="#parcours">Parcours</a></li>
-        <li><a href="#formation">Formation</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li><a href="#contact" class="btn btn-primary">Me contacter</a></li>
       </ul>
       <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème">
@@ -369,6 +500,22 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   </div>
 </section>
 
+<section id="methode">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Ma méthode</div>
+      <h2>Quatre étapes, aucune n'est optionnelle.</h2>
+      <p>La même démarche, que le projet soit un CRM, une automatisation ou un modèle d'IA.</p>
+    </div>
+    <div class="method reveal">
+      <div class="step"><div class="dot"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></div><div class="k">Étape 01</div><h3>Cadrer</h3><p>Comprendre le métier, ses irritants et ses données. Chiffrer la valeur avant d'écrire une ligne de code.</p><div class="ex"><b>Exemple :</b> deux études IA arrêtées au stade préliminaire — ROI estimé trop faible.</div></div>
+      <div class="step"><div class="dot"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6L4 18a2 2 0 0 0 1.8 3h12.4a2 2 0 0 0 1.8-3L15 8V2M8 2h8M7 14h10"/></svg></div><div class="k">Étape 02</div><h3>Prototyper</h3><p>Un POC rapide, sur vos vraies données, validé par ceux qui l'utiliseront au quotidien.</p><div class="ex"><b>Exemple :</b> POC Journal Officiel (regex + IA), validé par le métier.</div></div>
+      <div class="step"><div class="dot"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.7-.8.7-2.1-.1-2.9a2.2 2.2 0 0 0-2.9-.1z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.9A12.9 12.9 0 0 1 22 2c0 2.7-.8 7.5-6 11a22.4 22.4 0 0 1-4 2z"/><path d="M9 12H4s.6-3 2-4c1.6-1.1 5 0 5 0M12 15v5s3-.6 4-2c1.1-1.6 0-5 0-5"/></svg></div><div class="k">Étape 03</div><h3>Industrialiser</h3><p>Sécurité, souveraineté, intégration au SI, mise en production. Le POC devient un outil.</p><div class="ex"><b>Exemple :</b> DICTANOT, du POC au lancement commercial.</div></div>
+      <div class="step"><div class="dot"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div class="k">Étape 04</div><h3>Accompagner</h3><p>Formation, conduite du changement, support. Un outil n'a de valeur que s'il est adopté.</p><div class="ex"><b>Exemple :</b> ticketing groupe adopté par 100+ agents en 9 mois.</div></div>
+    </div>
+  </div>
+</section>
+
 <section id="offres">
   <div class="wrap">
     <div class="section-head reveal">
@@ -415,6 +562,34 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       </article>
     </div>
     <p class="offers-note reveal">Durées données à titre indicatif. Un premier appel de 30 minutes, sans engagement, permet de cadrer le besoin.</p>
+  </div>
+</section>
+
+<section id="calculateur" class="calc">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Calculateur</div>
+      <h2>Combien vous coûtent vos tâches répétitives&nbsp;?</h2>
+      <p>Ressaisies, copier-coller, relances, extractions… Estimez en 10 secondes ce qu'une automatisation pourrait vous faire gagner.</p>
+    </div>
+    <div class="calc-box reveal">
+      <form class="calc-in" id="calcForm" onsubmit="return false">
+        <div class="field"><label for="cP">Personnes concernées <output id="oP" for="cP">5</output></label><input type="range" id="cP" min="1" max="50" value="5"></div>
+        <div class="field"><label for="cH">Heures de tâches répétitives / semaine / personne <output id="oH" for="cH">6 h</output></label><input type="range" id="cH" min="1" max="20" value="6"></div>
+        <div class="field"><label for="cC">Coût horaire chargé <output id="oC" for="cC">45 €</output></label><input type="range" id="cC" min="20" max="120" step="5" value="45"></div>
+        <div class="field"><label for="cA">Part automatisable <output id="oA" for="cA">60 %</output></label><input type="range" id="cA" min="10" max="90" step="5" value="60"><small>En pratique, 40 à 70 % sur des tâches de saisie et de traitement documentaire.</small></div>
+      </form>
+      <div class="calc-out" aria-live="polite">
+        <div class="eyebrow">Gain estimé par an</div>
+        <div class="big"><span id="rE">36 450</span><small>€</small></div>
+        <div class="calc-sub">
+          <div><b id="rH">810</b><span>heures libérées</span></div>
+          <div><b id="rT">0,5</b><span>équivalent temps plein</span></div>
+        </div>
+        <a class="btn btn-primary js-book" href="mailto:michael.belval@huxa.io?subject=Demande%20d%27appel%20de%2030%20min"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Vérifions-le ensemble</a>
+        <p class="calc-note">Estimation indicative sur 45 semaines travaillées et 1 607 h par ETP. Hors coût de mise en place.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -762,7 +937,58 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="extras reveal">
       <div><b>Langues</b>Français (natif) · Anglais (professionnel)</div>
       <div><b>Mobilité</b>Aix – Avignon – Marseille · Télétravail · Permis B &amp; moto</div>
-      <div><b>En dehors</b>Football · Ski · Moto · Cinéma · Voyages</div>
+    </div>
+    <div class="life reveal">
+      <img src="photo-portrait.jpg" alt="Michaël Belval" width="600" height="800" loading="lazy">
+      <div>
+        <div class="eyebrow">En dehors du bureau</div>
+        <h3>Un projet, c'est aussi une équipe.</h3>
+        <p>Sport collectif, glisse et voyages : ce qui me plaît en dehors du travail ressemble à ce que j'aime dans un projet — l'esprit d'équipe, l'anticipation et la curiosité.</p>
+        <div class="hobbies"><span>⚽ Football</span><span>⛷️ Ski</span><span>🏍️ Moto</span><span>🎬 Cinéma &amp; séries</span><span>✈️ Voyages</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="recommandations" hidden>
+  <div class="wrap">
+    <div class="section-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
+      <div class="eyebrow">Recommandations</div>
+      <h2>Ils ont travaillé avec moi.</h2>
+    </div>
+    <div class="quotes reveal" id="quotes"></div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Questions fréquentes</div>
+      <h2>Avant de se parler.</h2>
+    </div>
+    <div class="faq reveal">
+      <details><summary>Quels sont vos tarifs ?</summary><p>Cela dépend du format : un forfait pour un diagnostic ou une automatisation au périmètre bien défini, un taux journalier pour une mission de chef de projet ou de Product Owner en régie. Je vous fais une proposition chiffrée après un premier échange de 30 minutes.</p></details>
+      <details><summary>Où intervenez-vous ?</summary><p>Sur site en région PACA (Aix-en-Provence, Avignon, Marseille et alentours) et en télétravail partout ailleurs. Les deux se combinent très bien.</p></details>
+      <details><summary>À temps plein ou à temps partiel ?</summary><p>Les deux sont possibles : une mission à temps plein, ou quelques jours par semaine pour piloter un projet aux côtés de vos équipes.</p></details>
+      <details><summary>Comment protégez-vous nos données ?</summary><p>La confidentialité fait partie de ma façon de travailler : j'ai conçu des projets data et IA traités entièrement en interne, sans exposition à des services tiers. Un accord de confidentialité peut être signé dès le premier échange.</p></details>
+      <details><summary>Travaillez-vous avec des PME ?</summary><p>Oui. Le diagnostic IA &amp; Data et l'automatisation des processus sont pensés pour aller vite, avec un périmètre adapté à votre taille et à votre budget.</p></details>
+      <details><summary>Dans quels secteurs avez-vous travaillé ?</summary><p>Legaltech et notariat, défense, télécoms, transport public et retail. La méthode — partir du besoin métier, prouver la valeur, industrialiser — se transpose à tous les secteurs.</p></details>
+      <details><summary>Comment démarrer ?</summary><p>Le plus simple : réservez un appel de 30 minutes. On fait le point sur votre besoin et je vous propose le format le plus adapté, sans engagement.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="notes" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Notes</div>
+      <h2>Retours d'expérience.</h2>
+      <p>Quelques leçons tirées du terrain, en quelques minutes de lecture.</p>
+    </div>
+    <div class="notes">
+      <a class="note reveal" href="notes/arreter-un-poc-ia.html"><span class="t">IA · 3 min</span><h3>Le jour où j'ai arrêté un POC IA</h3><p>Pourquoi savoir dire « non » à un projet d'IA est une compétence, pas un échec.</p><span class="more">Lire →</span></a>
+      <a class="note reveal" href="notes/ia-souveraine.html"><span class="t">Souveraineté · 3 min</span><h3>IA souveraine : garder ses données chez soi</h3><p>Faire de l'IA sans exposer ses données à des services tiers : c'est possible, et souvent plus simple qu'on ne le croit.</p><span class="more">Lire →</span></a>
+      <a class="note reveal" href="notes/regex-et-ia.html"><span class="t">Automatisation · 3 min</span><h3>Regex + IA : le duo sous-estimé</h3><p>Pourquoi les meilleurs résultats viennent souvent de règles simples combinées à l'IA, plutôt que de l'IA seule.</p><span class="more">Lire →</span></a>
     </div>
   </div>
 </section>
@@ -790,9 +1016,17 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <footer>
   <div class="wrap">
     <span>© <span id="yr">2026</span> Huxa Conseil · Michaël Belval — Transformation Digitale, IA &amp; Automatisation</span>
-    <a href="#top">Retour en haut ↑</a>
+    <span><a href="#notes">Notes</a> · <a href="#faq">FAQ</a> · <a href="#top">Retour en haut ↑</a></span>
   </div>
 </footer>
+
+<button class="bot-btn" id="botBtn" aria-expanded="false" aria-controls="bot"><i></i> Une question&nbsp;?</button>
+<div class="bot" id="bot" role="dialog" aria-label="Assistant Huxa Conseil" hidden>
+  <header><img src="photo.jpg" alt=""><div><b>Assistant Huxa Conseil</b><span>Réponses préparées par Michaël</span></div><button id="botClose" aria-label="Fermer">×</button></header>
+  <div class="log" id="botLog" aria-live="polite"></div>
+  <div class="sugg" id="botSugg"></div>
+  <form id="botForm"><input id="botIn" placeholder="Posez votre question…" autocomplete="off" aria-label="Votre question"><button aria-label="Envoyer">→</button></form>
+</div>
 
 <script>
 (function(){
@@ -941,6 +1175,77 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     if(io)io.observe(el);else{el.classList.add('in');el.querySelectorAll('.bar i').forEach(function(b){b.style.width=b.dataset.w+'%';});el.querySelectorAll('[data-count]').forEach(function(c){c.textContent=c.dataset.count;});}
   });
   document.getElementById('yr').textContent=new Date().getFullYear();
+
+  /* Méthode : la ligne se remplit à l'apparition (classe .in ajoutée par reveal) */
+
+  /* Calculateur */
+  var fmt=function(n,d){return n.toLocaleString('fr-FR',{maximumFractionDigits:d||0,minimumFractionDigits:d||0});};
+  function calc(){
+    var P=+cP.value,H=+cH.value,C=+cC.value,A=+cA.value;
+    [cP,cH,cC,cA].forEach(function(r){r.style.setProperty('--pct',((r.value-r.min)/(r.max-r.min)*100)+'%');});
+    oP.textContent=P;oH.textContent=H+' h';oC.textContent=C+' €';oA.textContent=A+' %';
+    var hours=P*H*45*A/100;
+    rH.textContent=fmt(Math.round(hours));rT.textContent=fmt(hours/1607,1);rE.textContent=fmt(Math.round(hours*C/50)*50);
+  }
+  var cP=document.getElementById('cP'),cH=document.getElementById('cH'),cC=document.getElementById('cC'),cA=document.getElementById('cA'),
+      oP=document.getElementById('oP'),oH=document.getElementById('oH'),oC=document.getElementById('oC'),oA=document.getElementById('oA'),
+      rH=document.getElementById('rH'),rT=document.getElementById('rT'),rE=document.getElementById('rE');
+  [cP,cH,cC,cA].forEach(function(r){r.addEventListener('input',calc);});calc();
+
+  /* Recommandations : ajoutez des entrées pour afficher la section
+     ex. {q:"Texte de la recommandation", n:"Prénom Nom", r:"Fonction, Entreprise"} */
+  var TESTIMONIALS=[];
+  if(TESTIMONIALS.length){
+    var qs=document.getElementById('quotes'),qi=0,qt;
+    qs.innerHTML=TESTIMONIALS.map(function(t,i){return '<figure class="quote'+(i?'':' on')+'"><blockquote>« '+esc(t.q)+' »</blockquote><cite><b>'+esc(t.n)+'</b> — '+esc(t.r)+'</cite></figure>';}).join('')
+      +(TESTIMONIALS.length>1?'<div class="qdots">'+TESTIMONIALS.map(function(t,i){return '<button aria-label="Recommandation '+(i+1)+'"'+(i?'':' aria-current="true"')+'></button>';}).join('')+'</div>':'');
+    function goQ(i){qi=i;qs.querySelectorAll('.quote').forEach(function(q,j){q.classList.toggle('on',j===i);});qs.querySelectorAll('.qdots button').forEach(function(b,j){b.setAttribute('aria-current',String(j===i));});}
+    qs.querySelectorAll('.qdots button').forEach(function(b,i){b.addEventListener('click',function(){clearInterval(qt);goQ(i);});});
+    if(TESTIMONIALS.length>1&&!reduce)qt=setInterval(function(){goQ((qi+1)%TESTIMONIALS.length);},7000);
+    document.getElementById('recommandations').hidden=false;
+  }
+
+  /* Spotlight qui suit la souris */
+  if(matchMedia('(hover:hover) and (pointer:fine)').matches){
+    document.addEventListener('pointermove',function(e){
+      var c=e.target.closest&&e.target.closest('.project,.offer,.exp,.note,.edu');if(!c)return;
+      var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px');
+    },{passive:true});
+  }
+
+  /* Assistant (réponses préparées, sans IA ni envoi de données) */
+  var BOOK=BOOKING_URL||'mailto:michael.belval@huxa.io';
+  var LINK_BOOK='<a href="'+BOOK+'" target="_blank" rel="noopener">réserver un appel de 30 min</a>';
+  var QA=[
+    {q:'Qui êtes-vous ?',k:['qui','parcours','experience','expérience','profil','cv','presentation','présentez'],a:"Michaël Belval, ingénieur informatique (ISEN Toulon) et chef de projet senior. 18 ans d'expérience : ingénierie systèmes (Thales, Airbus, SFR, RATP), puis transformation digitale, data et IA depuis 2015. J'ai fondé Huxa Conseil pour accompagner les entreprises <a href=\"#parcours\">du besoin métier à la mise en production</a>."},
+    {q:'Quelles missions proposez-vous ?',k:['mission','offre','service','proposez','faire pour','aider','prestation'],a:"Quatre formats : diagnostic IA & Data, du POC IA à la production, automatisation des processus, et chef de projet / Product Owner en mission. <a href=\"#offres\">Voir les offres</a>."},
+    {q:"Avez-vous mis de l'IA en production ?",k:['ia','intelligence','llm','genai','chatgpt','production','poc','dictanot','journal'],a:"Oui. DICTANOT, du POC au lancement commercial en janvier 2026 ; un POC regex + IA sur le Journal Officiel qui allège environ 2 ETP ; une base de référence immobilière en deep learning déployée dans le groupe. Et deux études arrêtées à temps faute de ROI."},
+    {q:'Comment protégez-vous les données ?',k:['donnée','donnees','données','rgpd','souverain','confidential','securite','sécurité','ai act','cloud'],a:"Sur mon dernier poste, tout le périmètre data & IA était traité en interne, sans exposition à des services tiers. J'intègre RGPD et AI Act dès le cadrage, et un accord de confidentialité peut être signé dès le premier échange."},
+    {q:'Où intervenez-vous ?',k:['intervenez','etes ou','ou etes','ou vous','ou travaill','situe','localis','deplac','sur site','zone','lieu','region','région','paca','marseille','aix','avignon','teletravail','télétravail','remote','distance'],a:"Sur site en PACA (Aix, Avignon, Marseille) et en télétravail partout ailleurs."},
+    {q:'Quels outils maîtrisez-vous ?',k:['outil','stack','techno','n8n','power automate','dataiku','jira','salesforce','fresh','microsoft','365','api'],a:"Jira & Confluence, suite Freshworks, Salesforce, Microsoft 365 & Power Automate, Dataiku, n8n, API REST, Brevo… et l'IA appliquée (LLM, deep learning). <a href=\"#expertise\">Voir l'expertise</a>."},
+    {q:'Quels sont vos tarifs ?',k:['tarif','prix','cout','coût','tjm','budget','combien','devis'],a:"Forfait pour un diagnostic ou une automatisation au périmètre clair, taux journalier pour une mission en régie. Je fais une proposition chiffrée après un premier échange : vous pouvez "+LINK_BOOK+"."},
+    {q:'Êtes-vous disponible ?',k:['dispo','disponible','quand','demarr','démarr','commencer','start'],a:"Oui, je suis disponible pour de nouvelles missions, à temps plein ou partiel. Le plus simple : "+LINK_BOOK+"."},
+    {q:'Comment vous contacter ?',k:['contact','joindre','mail','email','appel','rdv','rendez','linkedin','telephone','téléphone'],a:"Vous pouvez "+LINK_BOOK+", m'écrire à <a href=\"mailto:michael.belval@huxa.io\">michael.belval@huxa.io</a> ou passer par <a href=\"https://www.linkedin.com/in/micha%C3%ABl-belval-90940841/\" target=\"_blank\" rel=\"noopener\">LinkedIn</a>."}
+  ];
+  var bot=document.getElementById('bot'),botBtn=document.getElementById('botBtn'),log=document.getElementById('botLog'),sugg=document.getElementById('botSugg'),bin=document.getElementById('botIn'),started=false;
+  function say(html,who){var d=document.createElement('div');d.className='msg '+who;d.innerHTML=html;log.appendChild(d);log.scrollTop=log.scrollHeight;}
+  function norm(t){return t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+  function answer(text){
+    say(esc(text),'u');
+    var n=norm(text),best=null,score=0;
+    QA.forEach(function(x){var sc=x.k.reduce(function(a,k){return a+(new RegExp('(^|[^a-z0-9])'+norm(k).replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).test(n)?1:0);},0);if(sc>score){score=sc;best=x;}});
+    setTimeout(function(){say(best?best.a:"Bonne question ! Je n'ai pas de réponse toute prête, mais Michaël vous répondra directement : vous pouvez "+LINK_BOOK+" ou écrire à <a href=\"mailto:michael.belval@huxa.io\">michael.belval@huxa.io</a>.",'b');},reduce?0:350);
+  }
+  QA.forEach(function(x){var b=document.createElement('button');b.type='button';b.textContent=x.q;b.addEventListener('click',function(){answer(x.q);});sugg.appendChild(b);});
+  function toggleBot(open){
+    bot.hidden=!open;botBtn.setAttribute('aria-expanded',String(open));
+    if(open){if(!started){started=true;say("Bonjour 👋 Je réponds aux questions fréquentes sur le parcours et les offres de Michaël. Choisissez une question ou écrivez la vôtre.",'b');}bin.focus();}
+    else botBtn.focus();
+  }
+  botBtn.addEventListener('click',function(){toggleBot(bot.hidden);});
+  document.getElementById('botClose').addEventListener('click',function(){toggleBot(false);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!bot.hidden)toggleBot(false);});
+  document.getElementById('botForm').addEventListener('submit',function(e){e.preventDefault();var v=bin.value.trim();if(v){answer(v);bin.value='';}});
 })();
 </script>
 </body>
