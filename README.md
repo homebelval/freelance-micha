@@ -19,3 +19,15 @@ En ligne sur **https://conseil.huxa.io**
 3. (Recommandé) Settings → Pages → vérifier le domaine `huxa.io` pour éviter qu'un tiers puisse le revendiquer.
 
 La propagation DNS prend de quelques minutes à quelques heures.
+
+## Personnaliser
+
+Tout se règle en haut du `<script>` de `index.html` :
+
+- `BOOKING_URL` : lien de prise de rendez-vous (Microsoft Bookings).
+- `TESTIMONIALS` : recommandations. Tant que la liste est vide, la section reste masquée.
+  Format : `{q:"Texte", n:"Prénom Nom", r:"Fonction, Entreprise"}`.
+- `QA` : questions / réponses de l'assistant « Une question ? » (réponses préparées, sans IA ni envoi de données).
+
+Les articles de la section Notes sont dans `notes/`. Penser à ajouter chaque nouvel article dans `sitemap.xml`.
+L'image de partage (LinkedIn, WhatsApp…) est `og-image.jpg` (1200×630).

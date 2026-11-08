@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Regex + IA : le duo sous-estimé — Huxa Conseil</title>
+<meta name="description" content="Pourquoi combiner règles simples et IA donne souvent de meilleurs résultats que l'IA seule — retour d'expérience de Michaël Belval sur l'analyse du Journal Officiel.">
+<link rel="canonical" href="https://conseil.huxa.io/notes/regex-et-ia.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Regex + IA : le duo sous-estimé">
+<meta property="og:description" content="Pourquoi combiner règles simples et IA donne souvent de meilleurs résultats que l'IA seule — retour d'expérience de Michaël Belval sur l'analyse du Journal Officiel.">
+<meta property="og:url" content="https://conseil.huxa.io/notes/regex-et-ia.html">
+<meta property="og:image" content="https://conseil.huxa.io/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="author" content="Michaël Belval">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f1b3d'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='26' font-weight='700' fill='%23ffb547' text-anchor='middle'%3EHC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="notes.css">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+</head>
+<body>
+<header class="top"><div><a class="logo" href="../"><span>HC</span>Huxa Conseil</a><a class="back" href="../#notes">← Toutes les notes</a></div></header>
+<main>
+<article>
+<div class="tag">Automatisation · 3 min de lecture</div>
+<h1>Regex + IA&nbsp;: le duo sous-estimé</h1>
+<p class="lede">Face à un problème de traitement de texte, le réflexe aujourd'hui est de tout confier à un modèle d'IA. Ce n'est pas toujours la meilleure idée.</p>
+<div class="by"><img src="../photo.jpg" alt="" width="40" height="40"><div><b>Michaël Belval</b>Huxa Conseil</div></div>
+<p>Un exemple concret&nbsp;: l'analyse des publications du Journal Officiel. Chaque jour, une équipe devait parcourir les publications pour repérer celles qui la concernaient. Une tâche répétitive, chronophage, et sans réelle valeur ajoutée.</p>
+<p>Le POC que nous avons mené ne reposait pas sur l'IA seule, mais sur <strong>un couplage entre expressions régulières et IA</strong>. Le résultat, validé par le métier&nbsp;: un allègement de l'ordre de <strong>2 ETP</strong> de charge sans valeur ajoutée.</p>
+<h2>Chacun son rôle</h2>
+<ul>
+<li><strong>Les règles (regex)</strong> sont imbattables sur ce qui est structuré et prévisible&nbsp;: références, dates, formats, mots-clés. Elles sont rapides, gratuites à l'exécution et parfaitement explicables.</li>
+<li><strong>L'IA</strong> prend le relais là où les règles atteignent leurs limites&nbsp;: formulations variables, contexte, nuances.</li>
+</ul>
+<blockquote>Les règles font le gros du tri, l'IA traite les cas difficiles. Ensemble, elles sont plus fiables, moins coûteuses et plus faciles à expliquer qu'un modèle seul.</blockquote>
+<h2>Pourquoi ça marche</h2>
+<ul>
+<li><strong>Explicabilité&nbsp;:</strong> quand le métier demande «&nbsp;pourquoi ce résultat&nbsp;?&nbsp;», une partie de la réponse est une règle lisible.</li>
+<li><strong>Coût&nbsp;:</strong> moins de volume confié au modèle, donc moins de calcul.</li>
+<li><strong>Adoption&nbsp;:</strong> les utilisateurs font plus facilement confiance à un outil dont ils comprennent la logique.</li>
+<li><strong>Maintenance&nbsp;:</strong> une nouvelle règle s'ajoute en quelques minutes.</li>
+</ul>
+<h2>À retenir</h2>
+<p>L'objectif n'est pas d'utiliser l'IA, mais de résoudre un problème métier au meilleur rapport valeur / coût. Souvent, la meilleure solution est hybride.</p>
+<div class="cta"><b>Des tâches répétitives à automatiser&nbsp;?</b><p>Parlons de votre contexte en 30 minutes, sans engagement.</p><a href="https://bookings.cloud.microsoft/bookwithme/user/a078e81a7920433cb3ad9487d0a54044@huxa.io/meetingtype/LyDhICp1G0Cq14pFqhDhfg2?anonymous&amp;ismsaljsauthenabled&amp;ep=mlink" target="_blank" rel="noopener">Réserver un appel</a></div>
+<p class="more"><a href="../#notes">← Lire les autres notes</a> · <a href="../">Retour au site</a></p>
+</article>
+</main>
+<footer>© 2026 Huxa Conseil · Michaël Belval</footer>
+</body>
+</html>
