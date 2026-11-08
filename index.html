@@ -11,6 +11,9 @@
 <meta property="og:site_name" content="Huxa Conseil">
 <meta property="og:url" content="https://conseil.huxa.io/">
 <link rel="canonical" href="https://conseil.huxa.io/">
+<link rel="alternate" hreflang="fr" href="https://conseil.huxa.io/">
+<link rel="alternate" hreflang="en" href="https://conseil.huxa.io/en/">
+<link rel="alternate" hreflang="x-default" href="https://conseil.huxa.io/">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:image" content="https://conseil.huxa.io/og-image.jpg">
 <meta property="og:image:width" content="1200">
@@ -18,409 +21,20 @@
 <meta property="og:image:alt" content="Huxa Conseil — Michaël Belval, du besoin métier à la mise en production">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://conseil.huxa.io/og-image.jpg">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f1b3d'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='26' font-weight='700' fill='%23ffb547' text-anchor='middle'%3EHC%3C/text%3E%3C/svg%3E">
-<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Huxa Conseil", "url": "https://conseil.huxa.io/", "image": "https://conseil.huxa.io/og-image.jpg", "email": "michael.belval@huxa.io", "areaServed": ["Provence-Alpes-Côte d'Azur", "France"], "address": {"@type": "PostalAddress", "addressLocality": "Lauris", "postalCode": "84360", "addressRegion": "Provence-Alpes-Côte d'Azur", "addressCountry": "FR"}, "founder": {"@type": "Person", "name": "Michaël Belval", "jobTitle": "Chef de projet senior — Transformation digitale, IA & Automatisation", "image": "https://conseil.huxa.io/photo.jpg", "sameAs": ["https://www.linkedin.com/in/micha%C3%ABl-belval-90940841/"], "alumniOf": "ISEN Toulon", "knowsAbout": ["Intelligence artificielle", "IA générative", "Data", "Automatisation des processus", "Transformation digitale", "Gestion de projet", "Product Ownership"]}, "knowsAbout": ["IA générative", "Souveraineté des données", "Automatisation", "Data", "Transformation digitale"]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Quels sont vos tarifs ?", "acceptedAnswer": {"@type": "Answer", "text": "Cela dépend du format : un forfait pour un diagnostic ou une automatisation au périmètre bien défini, un taux journalier pour une mission de chef de projet ou de Product Owner en régie. Je vous fais une proposition chiffrée après un premier échange de 30 minutes."}}, {"@type": "Question", "name": "Où intervenez-vous ?", "acceptedAnswer": {"@type": "Answer", "text": "Sur site en région PACA (Aix-en-Provence, Avignon, Marseille et alentours) et en télétravail partout ailleurs. Les deux se combinent très bien."}}, {"@type": "Question", "name": "À temps plein ou à temps partiel ?", "acceptedAnswer": {"@type": "Answer", "text": "Les deux sont possibles : une mission à temps plein, ou quelques jours par semaine pour piloter un projet aux côtés de vos équipes."}}, {"@type": "Question", "name": "Comment protégez-vous nos données ?", "acceptedAnswer": {"@type": "Answer", "text": "La confidentialité fait partie de ma façon de travailler : j'ai conçu des projets data et IA traités entièrement en interne, sans exposition à des services tiers. Un accord de confidentialité peut être signé dès le premier échange."}}, {"@type": "Question", "name": "Travaillez-vous avec des PME ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Le diagnostic IA & Data et l'automatisation des processus sont pensés pour aller vite, avec un périmètre adapté à votre taille et à votre budget."}}, {"@type": "Question", "name": "Dans quels secteurs avez-vous travaillé ?", "acceptedAnswer": {"@type": "Answer", "text": "Legaltech et notariat, défense, télécoms, transport public et retail. La méthode — partir du besoin métier, prouver la valeur, industrialiser — se transpose à tous les secteurs."}}, {"@type": "Question", "name": "Comment démarrer ?", "acceptedAnswer": {"@type": "Answer", "text": "Le plus simple : réservez un appel de 30 minutes. On fait le point sur votre besoin et je vous propose le format le plus adapté, sans engagement."}}]}]</script>
+<link rel="icon" href="brand/huxa-icon.svg" type="image/svg+xml">
+<link rel="icon" href="brand/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="brand/apple-touch-icon.png">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Huxa Conseil", "url": "https://conseil.huxa.io/", "image": "https://conseil.huxa.io/og-image.jpg", "email": "michael.belval@huxa.io", "areaServed": ["Provence-Alpes-Côte d'Azur", "France"], "address": {"@type": "PostalAddress", "addressLocality": "Lauris", "postalCode": "84360", "addressRegion": "Provence-Alpes-Côte d'Azur", "addressCountry": "FR"}, "founder": {"@type": "Person", "name": "Michaël Belval", "jobTitle": "Chef de projet senior — Transformation digitale, IA & Automatisation", "image": "https://conseil.huxa.io/photo.jpg", "sameAs": ["https://www.linkedin.com/in/micha%C3%ABl-belval-90940841/"], "alumniOf": "ISEN Toulon", "knowsAbout": ["Intelligence artificielle", "IA générative", "Data", "Automatisation des processus", "Transformation digitale", "Gestion de projet", "Product Ownership"]}, "knowsAbout": ["IA générative", "Souveraineté des données", "Automatisation", "Data", "Transformation digitale"], "logo": "https://conseil.huxa.io/brand/huxa-icon-512.png"}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Quels sont vos tarifs ?", "acceptedAnswer": {"@type": "Answer", "text": "Cela dépend du format : un forfait pour un diagnostic ou une automatisation au périmètre bien défini, un taux journalier pour une mission de chef de projet ou de Product Owner en régie. Je vous fais une proposition chiffrée après un premier échange de 30 minutes."}}, {"@type": "Question", "name": "Où intervenez-vous ?", "acceptedAnswer": {"@type": "Answer", "text": "Sur site en région PACA (Aix-en-Provence, Avignon, Marseille et alentours) et en télétravail partout ailleurs. Les deux se combinent très bien."}}, {"@type": "Question", "name": "À temps plein ou à temps partiel ?", "acceptedAnswer": {"@type": "Answer", "text": "Les deux sont possibles : une mission à temps plein, ou quelques jours par semaine pour piloter un projet aux côtés de vos équipes."}}, {"@type": "Question", "name": "Comment protégez-vous nos données ?", "acceptedAnswer": {"@type": "Answer", "text": "La confidentialité fait partie de ma façon de travailler : j'ai conçu des projets data et IA traités entièrement en interne, sans exposition à des services tiers. Un accord de confidentialité peut être signé dès le premier échange."}}, {"@type": "Question", "name": "Travaillez-vous avec des PME ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Le diagnostic IA & Data et l'automatisation des processus sont pensés pour aller vite, avec un périmètre adapté à votre taille et à votre budget."}}, {"@type": "Question", "name": "Dans quels secteurs avez-vous travaillé ?", "acceptedAnswer": {"@type": "Answer", "text": "Legaltech et notariat, défense, télécoms, transport public et retail. La méthode — partir du besoin métier, prouver la valeur, industrialiser — se transpose à tous les secteurs."}}, {"@type": "Question", "name": "Comment démarrer ?", "acceptedAnswer": {"@type": "Answer", "text": "Le plus simple : réservez un appel de 30 minutes. On fait le point sur votre besoin et je vous propose le format le plus adapté, sans engagement."}}]}]</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#f7f5f0; --surface:#ffffff; --surface-2:#efece4;
-  --ink:#141a2e; --ink-2:#4a5068; --ink-3:#7a7f93;
-  --navy:#0f1b3d; --accent:#e8892b; --accent-ink:#b25f0f; --accent-soft:#fbe9d6;
-  --green-soft:#e3f0e6; --blue-soft:#e3eaf6;
-  --line:#e2ded3; --shadow:0 1px 2px rgba(20,26,46,.05),0 8px 24px rgba(20,26,46,.06);
-  --radius:16px; --maxw:1120px;
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --bg:#0c1122; --surface:#141a30; --surface-2:#1b2240;
-    --ink:#eef0f7; --ink-2:#b4b9cc; --ink-3:#8389a0;
-    --navy:#070b18; --accent:#ffb547; --accent-ink:#ffc46e; --accent-soft:#3a2a14;
-    --green-soft:#16302a; --blue-soft:#1a2648;
-    --line:#262e4d; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#0c1122; --surface:#141a30; --surface-2:#1b2240;
-  --ink:#eef0f7; --ink-2:#b4b9cc; --ink-3:#8389a0;
-  --navy:#070b18; --accent:#ffb547; --accent-ink:#ffc46e; --accent-soft:#3a2a14;
-  --green-soft:#16302a; --blue-soft:#1a2648;
-  --line:#262e4d; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:80px}
-body{background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-a{color:inherit}
-img,svg{display:block}
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
-h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:700;line-height:1.15;letter-spacing:-.01em}
-.eyebrow{font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink)}
-section{padding:96px 0}
-.section-head{max-width:720px;margin-bottom:48px}
-.section-head h2{font-size:clamp(1.9rem,4vw,2.6rem);margin:10px 0 14px}
-.section-head p{color:var(--ink-2);font-size:1.05rem}
-
-/* NAV */
-.nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .2s}
-.nav.scrolled{border-bottom-color:var(--line)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700}
-.logo span.mark{width:34px;height:34px;border-radius:10px;background:var(--navy);color:#ffb547;display:grid;place-items:center;font-size:.85rem;letter-spacing:.02em}
-.nav ul{display:flex;gap:28px;list-style:none;align-items:center}
-.nav ul a{text-decoration:none;color:var(--ink-2);font-size:.93rem;font-weight:500}
-.nav ul a:hover{color:var(--ink)}
-.nav ul a.btn-primary,.nav ul a.btn-primary:hover{color:#1a1205}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;font-weight:600;font-size:.95rem;text-decoration:none;border:1px solid transparent;transition:transform .15s,background .15s,border-color .15s;cursor:pointer}
-.btn:hover{transform:translateY(-1px)}
-.btn-primary{background:var(--accent);color:#1a1205}
-.btn-ghost{border-color:var(--line);background:var(--surface);color:var(--ink)}
-.btn-ghost:hover{border-color:var(--ink-3)}
-.nav .btn{padding:9px 16px;font-size:.88rem}
-.theme-toggle{background:none;border:1px solid var(--line);width:38px;height:38px;border-radius:50%;display:grid;place-items:center;color:var(--ink-2);cursor:pointer}
-.menu-toggle{display:none;background:none;border:0;color:var(--ink);cursor:pointer;padding:6px}
-
-/* HERO */
-.hero{padding:72px 0 88px;position:relative}
-.hero-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:56px;align-items:center}
-.status{display:inline-flex;align-items:center;gap:8px;background:var(--green-soft);color:var(--ink);padding:6px 14px;border-radius:999px;font-size:.85rem;font-weight:500;margin-bottom:24px}
-.status i{width:8px;height:8px;border-radius:50%;background:#2fa36b;box-shadow:0 0 0 4px rgba(47,163,107,.2)}
-.hero h1{font-size:clamp(2.5rem,6vw,4.3rem);margin-bottom:20px}
-.hero h1 em{font-style:normal;color:var(--accent-ink)}
-.hero .lead{font-size:1.15rem;color:var(--ink-2);max-width:580px;margin-bottom:32px}
-.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
-.hero-meta{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:32px;color:var(--ink-3);font-size:.9rem}
-.hero-meta span{display:inline-flex;align-items:center;gap:6px}
-.hero-card{background:var(--navy);color:#e9ecf6;border-radius:24px;padding:32px;box-shadow:var(--shadow);position:relative;overflow:hidden}
-.hero-card::before{content:"";position:absolute;width:260px;height:260px;right:-90px;top:-90px;border-radius:50%;background:radial-gradient(circle,rgba(255,181,71,.35),transparent 70%)}
-.who{display:flex;align-items:center;gap:16px;margin-bottom:26px;position:relative}
-.avatar{width:84px;height:84px;border-radius:50%;flex:0 0 auto;position:relative;background:linear-gradient(135deg,#ffb547,#e8892b);display:grid;place-items:center;font:700 1.6rem Fraunces,serif;color:#1a1205;box-shadow:0 0 0 4px rgba(255,255,255,.08)}
-.avatar img{position:absolute;inset:0;width:100%;height:100%;border-radius:50%;object-fit:cover}
-.who strong{display:block;color:#fff;font-size:1.1rem}
-.who span{color:#b9bfd6;font-size:.88rem}
-.hero-card h3{font-family:Inter,sans-serif;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#ffb547;font-weight:600;margin-bottom:20px}
-.arc{display:flex;flex-direction:column;gap:18px;position:relative}
-.arc-step{display:grid;grid-template-columns:56px 1fr;gap:14px;align-items:start}
-.arc-step b{font-family:Fraunces,serif;font-size:1.3rem;color:#fff;line-height:1.2}
-.arc-step p{font-size:.92rem;color:#b9bfd6;line-height:1.5}
-.arc-step strong{color:#fff;font-weight:600;display:block;font-size:.98rem}
-
-/* STATS */
-.stats{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:44px 0}
-.stats-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:24px}
-.stat .num{font-family:Fraunces,serif;font-size:clamp(2rem,4vw,2.7rem);font-weight:700;color:var(--ink);line-height:1}
-.stat .num small{font-size:.55em;color:var(--accent-ink)}
-.stat .lbl{color:var(--ink-2);font-size:.9rem;margin-top:8px;line-height:1.4}
-
-/* PROJECTS */
-.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
-.chip{border:1px solid var(--line);background:var(--surface);color:var(--ink-2);padding:8px 16px;border-radius:999px;font:500 .88rem Inter,sans-serif;cursor:pointer}
-.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.project{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px;display:flex;flex-direction:column;gap:12px;transition:transform .2s,box-shadow .2s}
-.project:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
-.project.hidden{display:none}
-.project .tags{display:flex;gap:6px;flex-wrap:wrap}
-.tag{font-size:.72rem;font-weight:600;padding:4px 10px;border-radius:999px;background:var(--surface-2);color:var(--ink-2);letter-spacing:.02em}
-.tag.ia{background:var(--accent-soft);color:var(--accent-ink)}
-.tag.data{background:var(--green-soft)}
-.tag.si{background:var(--blue-soft)}
-.project h3{font-size:1.25rem}
-.project p{color:var(--ink-2);font-size:.95rem;flex:1}
-.project .impact{border-top:1px dashed var(--line);padding-top:12px;font-size:.88rem;font-weight:600;color:var(--ink);display:flex;gap:8px}
-.project .impact::before{content:"→";color:var(--accent-ink)}
-.project .ctx{font-size:.8rem;color:var(--ink-3)}
-.project.feature{grid-column:span 2;background:linear-gradient(135deg,var(--surface),var(--accent-soft))}
-
-/* OFFRES */
-.offers{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.offer{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:14px;position:relative;transition:transform .2s,box-shadow .2s}
-.offer:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
-.offer .num{font:700 .8rem Inter,sans-serif;letter-spacing:.12em;color:var(--accent-ink)}
-.offer h3{font-size:1.45rem}
-.offer .pitch{color:var(--ink-2)}
-.offer .meta{display:flex;gap:8px;flex-wrap:wrap}
-.offer .meta span{font-size:.78rem;font-weight:600;padding:4px 10px;border-radius:999px;background:var(--surface-2);color:var(--ink-2)}
-.offer ul{list-style:none;display:flex;flex-direction:column;gap:7px;font-size:.93rem;color:var(--ink-2)}
-.offer li{padding-left:24px;position:relative}
-.offer li::before{content:"✓";position:absolute;left:0;color:var(--accent-ink);font-weight:700}
-.offer .proof{margin-top:auto;border-top:1px dashed var(--line);padding-top:14px;font-size:.88rem;color:var(--ink-2)}
-.offer .proof b{color:var(--ink)}
-.offer .btn{align-self:flex-start}
-.offers-note{margin-top:18px;font-size:.85rem;color:var(--ink-3)}
-
-/* METHODE */
-.method{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:step}
-.method::before{content:"";position:absolute;left:12%;right:12%;top:31px;height:2px;background:var(--line)}
-.method::after{content:"";position:absolute;left:12%;top:31px;height:2px;width:0;background:var(--accent);transition:width 1.6s cubic-bezier(.2,.7,.2,1) .2s}
-.method.in::after{width:76%}
-.step{position:relative;text-align:center;padding:0 6px}
-.step .dot{width:64px;height:64px;margin:0 auto 18px;border-radius:50%;background:var(--surface);border:2px solid var(--line);display:grid;place-items:center;color:var(--accent-ink);position:relative;z-index:1;transition:border-color .4s,background .4s,transform .4s}
-.method.in .step .dot{border-color:var(--accent);background:var(--accent-soft)}
-.method.in .step:nth-child(1) .dot{transition-delay:.2s}.method.in .step:nth-child(2) .dot{transition-delay:.6s}.method.in .step:nth-child(3) .dot{transition-delay:1s}.method.in .step:nth-child(4) .dot{transition-delay:1.4s}
-.step .k{font:700 .75rem Inter,sans-serif;letter-spacing:.14em;color:var(--ink-3);text-transform:uppercase}
-.step h3{font-size:1.35rem;margin:4px 0 8px}
-.step p{color:var(--ink-2);font-size:.93rem}
-.step .ex{margin-top:12px;font-size:.84rem;color:var(--ink-2);background:var(--surface);border:1px dashed var(--line);border-radius:12px;padding:10px 12px;text-align:left}
-.step .ex b{color:var(--ink)}
-
-/* CALCULATEUR */
-.calc{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.calc-box{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:stretch}
-.calc-in{background:var(--bg);border:1px solid var(--line);border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:22px}
-.field label{display:flex;justify-content:space-between;gap:12px;font-weight:600;font-size:.95rem;margin-bottom:10px}
-.field label output{font-family:Fraunces,serif;font-size:1.15rem;color:var(--accent-ink);white-space:nowrap}
-.field small{display:block;color:var(--ink-3);font-size:.8rem;margin-top:6px}
-input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:99px;background:linear-gradient(90deg,var(--accent) var(--pct,50%),var(--surface-2) var(--pct,50%));outline-offset:6px;cursor:pointer}
-input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:var(--surface);border:3px solid var(--accent);box-shadow:var(--shadow)}
-input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:var(--surface);border:3px solid var(--accent)}
-.calc-out{background:var(--navy);color:#e9ecf6;border-radius:22px;padding:32px;display:flex;flex-direction:column;gap:18px;position:relative;overflow:hidden}
-.calc-out::before{content:"";position:absolute;width:300px;height:300px;right:-120px;top:-120px;border-radius:50%;background:radial-gradient(circle,rgba(255,181,71,.3),transparent 70%)}
-.calc-out .eyebrow{color:#ffb547}
-.big{font-family:Fraunces,serif;font-size:clamp(2.6rem,6vw,3.6rem);font-weight:700;color:#fff;line-height:1}
-.big small{font-size:.4em;color:#ffb547;margin-left:6px}
-.calc-sub{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.calc-sub div{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:14px}
-.calc-sub b{display:block;font-family:Fraunces,serif;font-size:1.6rem;color:#fff}
-.calc-sub span{font-size:.85rem;color:#b9bfd6}
-.calc-out .calc-note{font-size:.8rem;color:#8f96b3;margin-top:auto}
-.calc-out .btn{align-self:flex-start;position:relative}
-
-/* EXPERTISE */
-.expertise{background:var(--surface)}
-.exp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.exp{border:1px solid var(--line);border-radius:var(--radius);padding:24px;background:var(--bg)}
-.exp .ico{width:44px;height:44px;border-radius:12px;background:var(--navy);color:#ffb547;display:grid;place-items:center;margin-bottom:16px}
-.exp h3{font-family:Inter,sans-serif;font-size:1.02rem;font-weight:700;margin-bottom:8px}
-.exp p{color:var(--ink-2);font-size:.9rem}
-.skills{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:56px}
-.skill{margin-bottom:18px}
-.skill-top{display:flex;justify-content:space-between;font-size:.93rem;font-weight:500;margin-bottom:8px}
-.skill-top span:last-child{color:var(--ink-3);font-size:.82rem}
-.bar{height:6px;border-radius:99px;background:var(--surface-2);overflow:hidden}
-.bar i{display:block;height:100%;background:var(--accent);border-radius:99px;width:0;transition:width 1.1s cubic-bezier(.2,.7,.2,1)}
-.stack h3{font-family:Inter,sans-serif;font-size:1rem;font-weight:700;margin-bottom:16px}
-.stack-list{display:flex;flex-wrap:wrap;gap:8px}
-.stack-list span{border:1px solid var(--line);background:var(--bg);padding:7px 13px;border-radius:10px;font-size:.88rem;color:var(--ink-2)}
-
-/* TIMELINE */
-.timeline{position:relative;padding-left:32px}
-.timeline::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:var(--line)}
-.era{font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin:40px 0 16px -32px;padding-left:32px;position:relative}
-.era:first-child{margin-top:0}
-.job{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);margin-bottom:14px;overflow:hidden}
-.job::before{content:"";position:absolute;left:-31px;top:26px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
-.job.past::before{border-color:var(--ink-3)}
-.job summary{list-style:none;cursor:pointer;padding:20px 24px;display:grid;grid-template-columns:1fr auto;gap:4px 16px;align-items:start}
-.job summary::-webkit-details-marker{display:none}
-.job .role{font-weight:700;font-size:1.05rem}
-.job .co{color:var(--ink-2);font-size:.92rem;grid-column:1}
-.job .date{font-size:.8rem;font-weight:600;background:var(--surface-2);color:var(--ink-2);padding:4px 10px;border-radius:8px;white-space:nowrap;grid-row:1;grid-column:2}
-.job .chev{grid-column:2;justify-self:end;color:var(--ink-3);transition:transform .2s}
-.job[open] .chev{transform:rotate(180deg)}
-.job .body{padding:0 24px 22px;color:var(--ink-2);font-size:.94rem}
-.job .body ul{padding-left:18px;margin-top:8px}
-.job .body li{margin-bottom:6px}
-.job .body li::marker{color:var(--accent-ink)}
-.job .tech{margin-top:12px;font-size:.84rem;color:var(--ink-3)}
-.job .tech b{color:var(--ink-2)}
-
-/* FORMATION */
-.edu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.edu{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
-.edu .yr{font-family:Fraunces,serif;font-size:1.5rem;color:var(--accent-ink);font-weight:700}
-.edu h3{font-family:Inter,sans-serif;font-size:1rem;margin:6px 0 4px}
-.edu p{color:var(--ink-2);font-size:.9rem}
-.extras{display:flex;gap:40px;flex-wrap:wrap;margin-top:32px;color:var(--ink-2);font-size:.95rem}
-.extras b{color:var(--ink);display:block;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px}
-
-/* HORS BUREAU */
-.life{display:grid;grid-template-columns:320px 1fr;gap:40px;align-items:center;margin-top:56px;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:28px}
-.life img{width:100%;height:380px;object-fit:cover;object-position:60% 40%;border-radius:18px;filter:grayscale(1) contrast(1.05)}
-.life h3{font-size:1.7rem;margin:8px 0 12px}
-.life p{color:var(--ink-2);margin-bottom:20px}
-.hobbies{display:flex;flex-wrap:wrap;gap:10px}
-.hobbies span{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:14px;background:var(--bg);border:1px solid var(--line);font-weight:600;font-size:.93rem;transition:transform .2s}
-.hobbies span:hover{transform:translateY(-2px) rotate(-1deg)}
-
-/* RECOMMANDATIONS */
-.quotes{position:relative;max-width:820px;margin:0 auto;text-align:center}
-.quote{display:none}.quote.on{display:block;animation:swap .5s ease}
-.quote blockquote{font-family:Fraunces,serif;font-size:clamp(1.3rem,3vw,1.8rem);line-height:1.35;margin-bottom:20px}
-.quote cite{font-style:normal;color:var(--ink-2)}
-.quote cite b{color:var(--ink)}
-.qdots{display:flex;gap:8px;justify-content:center;margin-top:24px}
-.qdots button{width:10px;height:10px;border-radius:50%;border:0;background:var(--line);cursor:pointer;padding:0}
-.qdots button[aria-current="true"]{background:var(--accent);width:28px;border-radius:99px}
-
-/* FAQ */
-.faq{max-width:820px}
-.faq details{border-bottom:1px solid var(--line)}
-.faq summary{list-style:none;cursor:pointer;padding:20px 40px 20px 0;font-weight:600;font-size:1.05rem;position:relative}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";position:absolute;right:4px;top:50%;transform:translateY(-50%);font-size:1.5rem;font-weight:400;color:var(--accent-ink);transition:transform .2s}
-.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
-.faq details p{color:var(--ink-2);padding:0 40px 22px 0}
-
-/* NOTES */
-.notes{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.note{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px;text-decoration:none;display:flex;flex-direction:column;gap:10px;transition:transform .2s,box-shadow .2s}
-.note:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
-.note .t{font-size:.78rem;font-weight:600;color:var(--accent-ink);letter-spacing:.06em;text-transform:uppercase}
-.note h3{font-size:1.3rem}
-.note p{color:var(--ink-2);font-size:.93rem;flex:1}
-.note .more{font-weight:600;font-size:.9rem}
-
-/* ASSISTANT */
-.bot-btn{position:fixed;right:20px;bottom:20px;z-index:60;display:flex;align-items:center;gap:8px;background:var(--navy);color:#fff;border:0;border-radius:999px;padding:13px 18px;font:600 .92rem Inter,sans-serif;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.25);transition:transform .2s}
-.bot-btn:hover{transform:translateY(-2px)}
-.bot-btn i{width:9px;height:9px;border-radius:50%;background:#2fa36b;box-shadow:0 0 0 3px rgba(47,163,107,.3)}
-.bot{position:fixed;right:20px;bottom:84px;z-index:61;width:min(380px,calc(100vw - 32px));max-height:min(560px,calc(100vh - 120px));background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:0 20px 50px rgba(0,0,0,.25);display:flex;flex-direction:column;overflow:hidden}
-.bot[hidden]{display:none}
-.bot header{background:var(--navy);color:#fff;padding:16px 18px;display:flex;align-items:center;gap:12px}
-.bot header img{width:38px;height:38px;border-radius:50%;object-fit:cover}
-.bot header b{display:block;font-size:.95rem}
-.bot header span{font-size:.78rem;color:#b9bfd6}
-.bot header button{margin-left:auto;background:none;border:0;color:#fff;font-size:1.4rem;cursor:pointer;line-height:1}
-.bot header,.bot .sugg,.bot form{flex-shrink:0}
-.bot .log{flex:1;min-height:120px;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px}
-.msg{max-width:88%;padding:10px 14px;border-radius:16px;font-size:.9rem;line-height:1.5}
-.msg.b{background:var(--bg);border:1px solid var(--line);border-bottom-left-radius:4px;align-self:flex-start}
-.msg.u{background:var(--accent);color:#1a1205;border-bottom-right-radius:4px;align-self:flex-end}
-.msg a{color:var(--accent-ink);font-weight:600}
-.sugg{display:flex;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:thin;gap:6px;padding:4px 16px 12px}
-.sugg button{flex:0 0 auto;white-space:nowrap;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:6px 12px;font:500 .8rem Inter,sans-serif;cursor:pointer}
-.sugg button:hover{border-color:var(--accent)}
-.bot form{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line)}
-.bot input{flex:1;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:12px;padding:10px 12px;font:inherit;font-size:.9rem;min-width:0}
-.bot form button{border:0;background:var(--accent);color:#1a1205;border-radius:12px;padding:0 14px;font-weight:700;cursor:pointer}
-
-/* SPOTLIGHT + HERO GLOW */
-@media (hover:hover) and (pointer:fine){
-  .project,.offer,.exp,.note,.edu{background-image:radial-gradient(400px circle at var(--mx,-999px) var(--my,-999px),color-mix(in srgb,var(--accent) 12%,transparent),transparent 60%)}
-}
-.hero{overflow:hidden;isolation:isolate}
-.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;filter:blur(70px);opacity:.45;z-index:-1;pointer-events:none}
-.hero::before{width:420px;height:420px;background:var(--accent-soft);left:-120px;top:-80px;animation:float1 18s ease-in-out infinite alternate}
-.hero::after{width:360px;height:360px;background:var(--blue-soft);right:-80px;bottom:-120px;animation:float2 22s ease-in-out infinite alternate}
-@keyframes float1{to{transform:translate(160px,90px) scale(1.15)}}
-@keyframes float2{to{transform:translate(-140px,-60px) scale(1.2)}}
-.hero .wrap{position:relative;z-index:1}
-
-/* CONTACT */
-.contact{background:var(--navy);color:#e9ecf6;border-radius:28px;padding:64px 48px;position:relative;overflow:hidden;text-align:center}
-.contact::after{content:"";position:absolute;width:420px;height:420px;left:50%;bottom:-260px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle,rgba(255,181,71,.3),transparent 70%)}
-.contact h2{font-size:clamp(1.9rem,4.5vw,2.8rem);color:#fff;max-width:720px;margin:12px auto 16px}
-.contact p{color:#b9bfd6;max-width:560px;margin:0 auto 32px}
-.contact .eyebrow{color:#ffb547}
-.contact .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.25)}
-.contact .hero-ctas{justify-content:center;position:relative;z-index:1}
-.contact .btn-light{background:#fff;color:#1a1205}
-footer{padding:40px 0;color:var(--ink-3);font-size:.85rem}
-footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-
-/* ROTATOR */
-.rot{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-weight:600;font-size:1.05rem;margin:-6px 0 22px;color:var(--ink-2)}
-.rot .word{color:var(--ink);background:var(--accent-soft);padding:4px 12px;border-radius:10px;min-height:1.9em;display:inline-flex;align-items:center}
-.rot .caret{display:inline-block;width:2px;height:1.1em;background:var(--accent-ink);margin-left:3px;animation:blink 1s steps(1) infinite}
-@keyframes blink{50%{opacity:0}}
-
-/* TOPICS */
-.topics{background:var(--surface);border-bottom:1px solid var(--line)}
-.topic-tabs{position:relative;display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px}
-.topic-tab{position:relative;overflow:hidden;border:1px solid var(--line);background:var(--bg);color:var(--ink);padding:12px 18px;border-radius:14px;font:600 .93rem Inter,sans-serif;cursor:pointer;display:flex;align-items:center;gap:8px;transition:border-color .2s,background .2s}
-.topic-tab:hover{border-color:var(--ink-3)}
-.topic-tab[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.topic-tab .hot{font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--accent);color:#1a1205;padding:2px 7px;border-radius:6px}
-.topic-tab .prog{position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--accent)}
-.topic-tab[aria-selected="true"] .prog.run{animation:prog var(--cycle,7s) linear forwards}
-@keyframes prog{to{width:100%}}
-.topic-panel{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;background:var(--bg);border:1px solid var(--line);border-radius:22px;padding:32px}
-.topic-panel.swap{animation:swap .45s ease}
-@keyframes swap{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-.topic-panel h3{font-size:clamp(1.5rem,3vw,2rem);margin:8px 0 12px}
-.topic-panel .why{color:var(--ink-2);margin-bottom:20px}
-.topic-panel .why b{color:var(--ink)}
-.topic-kpi{display:flex;align-items:baseline;gap:12px;padding:16px 20px;border-radius:14px;background:var(--accent-soft);margin-bottom:20px}
-.topic-kpi .v{white-space:nowrap;font-family:Fraunces,serif;font-size:2.4rem;font-weight:700;line-height:1;color:var(--accent-ink)}
-.topic-kpi .l{font-size:.9rem;color:var(--ink);font-weight:500}
-.proofs{list-style:none;display:flex;flex-direction:column;gap:10px}
-.proofs li{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:.92rem;color:var(--ink-2)}
-.proofs li b{display:block;color:var(--ink);font-size:.97rem;margin-bottom:2px}
-.kw{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:22px}
-.kw span{font-size:.78rem;font-weight:600;padding:4px 10px;border-radius:999px;border:1px solid var(--line);color:var(--ink-2);background:var(--surface)}
-.project.lit{animation:lit 1.6s ease}
-@keyframes lit{0%,40%{box-shadow:0 0 0 3px var(--accent)}100%{box-shadow:0 0 0 0 transparent}}
-
-/* MARQUEE */
-.marquee{overflow:hidden;border-top:1px solid var(--line);background:var(--navy);color:#cfd4e6;padding:14px 0;white-space:nowrap;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
-.marquee .track{display:inline-flex;gap:36px;animation:marq 40s linear infinite;padding-left:36px}
-.marquee:hover .track{animation-play-state:paused}
-.marquee span{font-weight:600;font-size:.92rem;display:inline-flex;align-items:center;gap:36px}
-.marquee span::after{content:"✦";color:#ffb547;font-size:.7rem}
-@keyframes marq{to{transform:translateX(-50%)}}
-
-/* REVEAL */
-.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}
-.reveal.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.bar i{transition:none}html{scroll-behavior:auto}.marquee .track,.rot .caret,.topic-panel.swap,.project.lit,.hero::before,.hero::after,.quote.on{animation:none}.method::after,.step .dot{transition:none}.topic-tab .prog{display:none}}
-
-/* RESPONSIVE */
-@media (max-width:960px){
-  .hero-grid{grid-template-columns:1fr}
-  .stats-grid{grid-template-columns:repeat(3,1fr)}
-  .projects{grid-template-columns:1fr 1fr}
-  .exp-grid{grid-template-columns:1fr 1fr}
-  .skills{grid-template-columns:1fr;gap:32px}
-  .topic-panel{grid-template-columns:1fr}
-  .offers{grid-template-columns:1fr}
-  .edu-grid{grid-template-columns:1fr 1fr}
-  .calc-box{grid-template-columns:1fr}
-  .method{grid-template-columns:1fr 1fr;row-gap:36px}
-  .method::before,.method::after{display:none}
-  .notes{grid-template-columns:1fr}
-  .life{grid-template-columns:1fr}
-  .life img{height:320px}
-}
-@media (max-width:1100px){
-  .nav ul{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:8px 24px 16px}
-  .nav ul.open{display:flex}
-  .nav ul li a{display:block;padding:12px 0}
-  .nav ul .btn{justify-content:center;margin-top:8px}
-  .menu-toggle{display:block}
-}
-@media (max-width:760px){
-  .wrap{padding:0 16px}
-  section{padding:64px 0}
-  .nav ul{padding:8px 16px 16px}
-  .hero{padding:40px 0 56px}
-  .method{grid-template-columns:1fr}
-  .calc-in,.calc-out{padding:22px}
-  .life{padding:18px;gap:24px}
-  .bot-btn{right:16px;bottom:16px}
-  .bot{right:16px;bottom:76px}
-  .stats-grid{grid-template-columns:1fr 1fr}
-  .projects,.exp-grid,.edu-grid{grid-template-columns:1fr}
-  .project.feature{grid-column:auto}
-  .contact{padding:48px 22px;border-radius:20px}
-  .topic-panel{padding:22px}
-  .topic-tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0 -16px 20px;padding:2px 16px}
-  .topic-tabs::-webkit-scrollbar{display:none}
-  .topic-tab{flex:0 0 auto;padding:10px 14px;font-size:.88rem}
-  .job summary{grid-template-columns:1fr auto;padding:18px}
-  .job .body{padding:0 18px 18px}
-  .timeline{padding-left:24px}
-  .job::before{left:-23px}
-  .timeline::before{left:3px}
-  .era{margin-left:-24px;padding-left:24px}
-}
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <nav class="nav" id="nav">
   <div class="wrap">
-    <a href="#top" class="logo"><span class="mark">HC</span><span>Huxa Conseil</span></a>
+    <a href="#top" class="logo"><img class="mark" src="brand/huxa-icon.svg" width="34" height="34" alt=""><span>Huxa Conseil</span></a>
     <div style="display:flex;align-items:center;gap:12px">
       <ul id="menu">
         <li><a href="#actualite">Sujets clés</a></li>
@@ -429,6 +43,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <li><a href="#projets">Réalisations</a></li>
         <li><a href="#parcours">Parcours</a></li>
         <li><a href="#faq">FAQ</a></li>
+        <li><a href="en/" class="lang" hreflang="en" lang="en" data-lang="en" title="English version">EN</a></li>
         <li><a href="#contact" class="btn btn-primary">Me contacter</a></li>
       </ul>
       <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème">
@@ -479,7 +94,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="wrap stats-grid">
     <div class="stat reveal"><div class="num"><span data-count="18">18</span><small> ans</small></div><div class="lbl">de gestion de projets</div></div>
     <div class="stat reveal"><div class="num"><span data-count="95">95</span><small>%</small></div><div class="lbl">de la data métier maîtrisée, en partant de zéro</div></div>
-    <div class="stat reveal"><div class="num">~<span data-count="2">2</span><small> ETP</small></div><div class="lbl">de charge sans valeur ajoutée supprimés par l'IA</div></div>
+    <div class="stat reveal"><div class="num">~<span data-count="2">2</span><small> ETP</small></div><div class="lbl">de temps libéré pour des tâches à valeur ajoutée</div></div>
     <div class="stat reveal"><div class="num"><span data-count="100">100</span><small>+</small></div><div class="lbl">agents outillés par un ticketing groupe en 9 mois</div></div>
     <div class="stat reveal"><div class="num">0</div><div class="lbl">rupture de service lors d'une sortie d'ERP</div></div>
   </div>
@@ -539,13 +154,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <p class="pitch">Passer de la démo à un outil réellement utilisé, sur vos données, sans les exposer à des services tiers.</p>
         <div class="meta"><span>Quelques semaines à quelques mois</span><span>Forfait ou régie</span></div>
         <ul><li>POC sur vos données réelles, validé par le métier</li><li>Architecture souveraine : données et modèles maîtrisés</li><li>Industrialisation, mise en production et adoption</li><li>Mesure du gain (temps, ETP, qualité)</li></ul>
-        <div class="proof"><b>Références :</b> DICTANOT, de l'idée au lancement commercial · POC Journal Officiel, ≈ 2 ETP allégés.</div>
+        <div class="proof"><b>Références :</b> DICTANOT, de l'idée au lancement commercial · POC Journal Officiel, ≈ 2 ETP de temps libéré pour des missions à valeur ajoutée.</div>
         <a class="btn btn-ghost" href="mailto:michael.belval@huxa.io?subject=Huxa%20Conseil%20%E2%80%94%20POC%20IA%20vers%20la%20production">En parler →</a>
       </article>
       <article class="offer reveal">
         <div class="num">OFFRE 03</div>
         <h3>Automatisation des processus</h3>
-        <p class="pitch">Supprimer les ressaisies et les tâches sans valeur ajoutée en reliant vos outils entre eux.</p>
+        <p class="pitch">Libérer vos équipes des ressaisies et des tâches répétitives en reliant vos outils entre eux, pour qu'elles se concentrent sur ce qui compte.</p>
         <div class="meta"><span>n8n · Power Automate · API REST</span><span>Forfait</span></div>
         <ul><li>Audit des flux et urbanisation fonctionnelle</li><li>Automatisations en production (CRM, ERP, facturation…)</li><li>Documentation, formation et passation aux équipes</li><li>Tableaux de bord pour suivre les gains</li></ul>
         <div class="proof"><b>Référence :</b> dématérialisation de la facture client — zéro traitement manuel.</div>
@@ -584,7 +199,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <div class="big"><span id="rE">36 450</span><small>€</small></div>
         <div class="calc-sub">
           <div><b id="rH">810</b><span>heures libérées</span></div>
-          <div><b id="rT">0,5</b><span>équivalent temps plein</span></div>
+          <div><b id="rT">0,5</b><span>équivalent temps plein à réorienter</span></div>
         </div>
         <a class="btn btn-primary js-book" href="mailto:michael.belval@huxa.io?subject=Demande%20d%27appel%20de%2030%20min"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Vérifions-le ensemble</a>
         <p class="calc-note">Estimation indicative sur 45 semaines travaillées et 1 607 h par ETP. Hors coût de mise en place.</p>
@@ -627,7 +242,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <div class="tags"><span class="tag ia">IA</span><span class="tag">Regex + LLM</span></div>
         <h3>POC Journal Officiel</h3>
         <p>Analyse automatique des publications du Journal Officiel en couplant expressions régulières et IA, validée par le métier.</p>
-        <div class="impact">≈ 2 ETP de tâches sans valeur ajoutée allégés</div>
+        <div class="impact">≈ 2 ETP de temps libéré pour des tâches à valeur ajoutée</div>
         <div class="ctx">ADNOV · IA appliquée</div>
       </article>
       <article class="project reveal" id="p-souverainet-des-donn-es" data-cat="souv ia data">
@@ -801,7 +416,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <ul>
             <li>Projet DATA : de zéro à 95 % de la data métier maîtrisée, KPI et tableaux de bord en production.</li>
             <li>DICTANOT : POC, industrialisation et lancement commercial (janvier 2026).</li>
-            <li>POC Journal Officiel (regex + IA) : allègement d'environ 2 ETP.</li>
+            <li>POC Journal Officiel (regex + IA) : environ 2 ETP de tâches répétitives automatisées, réorientés vers l'analyse et le conseil.</li>
             <li>Référentiel client V1 &amp; V2, export D365, automatisation de la facturation ; dématérialisation de la facture client.</li>
             <li>Désengagement Adonix (DPO &amp; Service Client) sans rupture de service ; industrialisation de la chaîne DPO, SMART GDPR.</li>
             <li>Urbanisation fonctionnelle, formation utilisateurs, accompagnement au changement, support N1/N2.</li>
@@ -1015,8 +630,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 <footer>
   <div class="wrap">
-    <span>© <span id="yr">2026</span> Huxa Conseil · Michaël Belval — Transformation Digitale, IA &amp; Automatisation</span>
-    <span><a href="#notes">Notes</a> · <a href="#faq">FAQ</a> · <a href="#top">Retour en haut ↑</a></span>
+    <span>© <span id="yr">2026</span> Huxa Conseil · Michaël Belval EI — Transformation Digitale, IA &amp; Automatisation</span>
+    <span><a href="#notes">Notes</a> · <a href="#faq">FAQ</a> · <a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a> · <a href="#top">Retour en haut ↑</a></span>
   </div>
 </footer>
 
@@ -1029,224 +644,76 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 </div>
 
 <script>
-(function(){
-  /* Lien de prise de rendez-vous (Calendly, Cal.com, Infomaniak…). Laisser vide pour utiliser l'e-mail. */
-  var BOOKING_URL='https://bookings.cloud.microsoft/bookwithme/user/a078e81a7920433cb3ad9487d0a54044@huxa.io/meetingtype/LyDhICp1G0Cq14pFqhDhfg2?anonymous&ismsaljsauthenabled&ep=mlink';
-  if(BOOKING_URL)document.querySelectorAll('.js-book').forEach(function(a){a.href=BOOKING_URL;a.target='_blank';a.rel='noopener';});
-
-  var root=document.documentElement;
-  try{var t=localStorage.getItem('theme');if(t)root.setAttribute('data-theme',t);}catch(e){}
-  document.getElementById('themeToggle').addEventListener('click',function(){
-    var cur=root.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
-    var next=cur==='dark'?'light':'dark';root.setAttribute('data-theme',next);
-    try{localStorage.setItem('theme',next);}catch(e){}
-  });
-
-  var menu=document.getElementById('menu'),mt=document.getElementById('menuToggle');
-  mt.addEventListener('click',function(){var o=menu.classList.toggle('open');mt.setAttribute('aria-expanded',o);});
-  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open');mt.setAttribute('aria-expanded','false');});});
-
-  var nav=document.getElementById('nav');
-  addEventListener('scroll',function(){nav.classList.toggle('scrolled',scrollY>8);},{passive:true});
-
-  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  function filterProjects(f){
-    document.querySelectorAll('.chip').forEach(function(x){x.setAttribute('aria-pressed',String(x.dataset.f===f));});
-    document.querySelectorAll('.project').forEach(function(p){
-      var show=f==='all'||p.dataset.cat.split(' ').indexOf(f)>-1;
-      p.classList.toggle('hidden',!show);
-      p.classList.toggle('feature',show&&f==='all'&&p.id==='p-dictanot');
-      if(show)p.classList.add('in');
-    });
-  }
-  document.querySelectorAll('.chip').forEach(function(c){
-    c.addEventListener('click',function(){filterProjects(c.dataset.f);});
-  });
-
-  /* Rotating expertise word */
-  var words=['IA générative & LLM','Data & pilotage','Automatisation des processus','Souveraineté des données','Transformation digitale','Product Ownership'];
-  var rw=document.getElementById('rotWord'),wi=0;
-  if(!reduce){
-    (function cycle(){
-      var target=words[wi=(wi+1)%words.length],cur=rw.textContent;
-      (function del(){
-        if(cur.length){cur=cur.slice(0,-1);rw.textContent=cur;setTimeout(del,28);}
-        else (function type(i){rw.textContent=target.slice(0,i);if(i<target.length)setTimeout(function(){type(i+1);},55);else setTimeout(cycle,2200);})(1);
-      })();
-    })();
-  }
-
-  /* Animated counters */
-  function count(el){
-    var to=+el.dataset.count;if(reduce){el.textContent=to;return;}
-    var t0=null,d=1400;
-    (function step(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/d);el.textContent=Math.round(to*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(step);})(performance.now());
-  }
-
-  /* Topics explorer */
-  var TOPICS=[
+/* Contenu de la version française — la logique est dans app.js */
+window.SITE={
+  /* Lien de prise de rendez-vous. Laisser vide pour utiliser l'e-mail. */
+  bookingUrl:'https://bookings.cloud.microsoft/bookwithme/user/a078e81a7920433cb3ad9487d0a54044@huxa.io/meetingtype/LyDhICp1G0Cq14pFqhDhfg2?anonymous&ismsaljsauthenabled&ep=mlink',
+  langHint:{when:'notFr',href:'en/',lang:'en',text:'This site is also available in English.',cta:'Switch to English',close:'Dismiss'},
+  locale:'fr-FR',
+  units:{h:' h',cur:'{n} €',pct:'{n} %'},
+  words:['IA générative & LLM','Data & pilotage','Automatisation des processus','Souveraineté des données','Transformation digitale','Product Ownership'],
+  t:{
+    trending:'Tendance',whyNow:"Pourquoi c'est d'actualité",delivered:"Ce que j'ai livré",seeProjects:'Voir les projets liés →',
+    recommendation:'Recommandation',quotes:['« ',' »'],
+    bookLink:'réserver un appel de 30 min',
+    botHello:"Bonjour 👋 Je réponds aux questions fréquentes sur le parcours et les offres de Michaël. Choisissez une question ou écrivez la vôtre.",
+    botFallback:"Bonne question ! Je n'ai pas de réponse toute prête, mais Michaël vous répondra directement : vous pouvez {BOOK} ou écrire à <a href=\"mailto:michael.belval@huxa.io\">michael.belval@huxa.io</a>."
+  },
+  /* Recommandations : ajoutez des entrées pour afficher la section
+     ex. {q:"Texte de la recommandation", n:"Prénom Nom", r:"Fonction, Entreprise"} */
+  testimonials:[],
+  topics:[
     {id:'ia',label:'IA générative & LLM',hot:true,
      why:"Les entreprises passent des démos aux <b>usages en production</b>. L'enjeu n'est plus de tester l'IA, mais de l'industrialiser avec un <b>ROI mesurable</b> et une donnée maîtrisée.",
-     kpi:['~2 ETP','de tâches sans valeur ajoutée allégés par un POC IA validé par le métier'],
+     kpi:['~2 ETP',"de temps rendu aux équipes : tâches répétitives automatisées, expertise recentrée sur la valeur ajoutée"],
      kw:['LLM','Regex + IA','Deep learning','POC → production','ROI'],
-     proofs:[['DICTANOT','De l\'idée au marché : POC, industrialisation et lancement commercial en janvier 2026.','p-dictanot'],
-             ['POC Journal Officiel','Analyse automatique des publications (regex + IA), validée par le métier.','p-poc-journal-officiel'],
-             ['Base de référence immobilière','Deep learning en remplacement d\'un outil coûteux — ROI mesuré, déployé dans le groupe.','p-base-de-r-f-rence-immobili-re'],
-             ['Savoir dire non','Deux études IA arrêtées au stade préliminaire : ROI estimé trop faible.',null]]},
+     proofs:[['DICTANOT',"De l'idée au marché : POC, industrialisation et lancement commercial en janvier 2026."],
+             ['POC Journal Officiel','Analyse automatique des publications (regex + IA), validée par le métier.'],
+             ['Base de référence immobilière',"Deep learning en remplacement d'un outil coûteux — ROI mesuré, déployé dans le groupe."],
+             ['Savoir dire non','Deux études IA arrêtées au stade préliminaire : ROI estimé trop faible.']]},
     {id:'souv',label:'Souveraineté & conformité',hot:true,
      why:"RGPD, <b>AI Act européen</b>, données sensibles : la question n'est plus seulement « que peut faire l'IA ? » mais « <b>où vont nos données ?</b> ».",
      kpi:['0','exposition de données vers des services tiers sur le périmètre data & IA'],
      kw:['RGPD','AI Act','DLP / MFA','IA on-premise','DPO'],
-     proofs:[['Souveraineté des données','Collecte, transformation et modèles traités en interne, sans service tiers.','p-souverainet-des-donn-es'],
-             ['Chaîne DPO industrialisée','Plateforme SMART GDPR, prise de RDV, enquêtes, CRM et facturation.','p-industrialisation-de-la-cha-ne-dpo'],
-             ['Microsoft 365 sécurisé','Instance pilote DLP / MFA qui a servi de base à la migration du groupe.','p-microsoft-365']]},
+     proofs:[['Souveraineté des données','Collecte, transformation et modèles traités en interne, sans service tiers.'],
+             ['Chaîne DPO industrialisée','Plateforme SMART GDPR, prise de RDV, enquêtes, CRM et facturation.'],
+             ['Microsoft 365 sécurisé','Instance pilote DLP / MFA qui a servi de base à la migration du groupe.']]},
     {id:'data',label:'Data & pilotage',
      why:"Sans donnée fiable, pas d'IA utile ni de pilotage. Le vrai chantier : <b>référentiels, qualité et KPI</b> utilisés au quotidien.",
      kpi:['95 %','de la data métier maîtrisée, en partant de zéro'],
      kw:['ETL','Référentiels','KPI','Dataiku','Tableaux de bord'],
-     proofs:[['Projet DATA ADNOV','KPI et tableaux de bord en production, utilisés chaque jour pour piloter l\'activité.','p-projet-data-adnov'],
-             ['Référentiel Client V1 & V2','Codes clients automatiques, synchro CRM, export Dynamics 365.','p-r-f-rentiel-client'],
-             ['Sortie d\'ERP Adonix','Reprise complète des données et refonte des processus.','p-d-sengagement-adonix']]},
+     proofs:[['Projet DATA ADNOV',"KPI et tableaux de bord en production, utilisés chaque jour pour piloter l'activité."],
+             ['Référentiel Client V1 & V2','Codes clients automatiques, synchro CRM, export Dynamics 365.'],
+             ["Sortie d'ERP Adonix",'Reprise complète des données et refonte des processus.']]},
     {id:'auto',label:'Automatisation & low-code',hot:true,
      why:"n8n, Power Automate, agents IA : automatiser les processus répétitifs est devenu <b>accessible et rapide</b> — à condition de bien les urbaniser.",
      kpi:['0','traitement manuel sur la chaîne de facturation client'],
      kw:['n8n','Power Automate','API REST','Low-code','Dev assisté par IA'],
-     proofs:[['Dématérialisation de la facture client','Extraction automatisée, intégration au référentiel et à l\'ERP.','p-d-mat-rialisation-de-la-facture-client'],
-             ['Chaîne DPO','Rendez-vous, enquêtes de satisfaction, CRM et facturation automatisés.','p-industrialisation-de-la-cha-ne-dpo'],
-             ['Référentiel client','Facturation automatisée de bout en bout.','p-r-f-rentiel-client']]},
+     proofs:[['Dématérialisation de la facture client',"Extraction automatisée, intégration au référentiel et à l'ERP."],
+             ['Chaîne DPO','Rendez-vous, enquêtes de satisfaction, CRM et facturation automatisés.'],
+             ['Référentiel client','Facturation automatisée de bout en bout.']]},
     {id:'transfo',label:'Transformation digitale',
      why:"Les outils ne suffisent pas : la réussite tient à l'<b>adoption</b>. Cadrage, conduite du changement et pilotage des éditeurs font la différence.",
      kpi:['100+','agents outillés par un ticketing groupe, en production en 9 mois'],
      kw:['CRM','Ticketing','Modern workplace','Conduite du changement','Agilité'],
-     proofs:[['ADSN Direct (Freshdesk)','Ticketing pour 100+ agents et toute la population notariale.','p-adsn-direct'],
-             ['CRM groupe & sortie d\'ERP','Premier pan du CRM groupe, zéro rupture de service à la sortie d\'Adonix.','p-crm-groupe'],
-             ['Jira & Confluence cloud','Migration de toute la direction technique, backlogs et roadmap structurés.','p-migration-jira']]}
-  ];
-  var tabs=document.getElementById('topicTabs'),panel=document.getElementById('topicPanel'),cur=0,timer=null,CYCLE=7000,userPicked=false,visible=false;
-  function esc(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;');}
-  TOPICS.forEach(function(t,i){
-    var b=document.createElement('button');b.className='topic-tab';b.setAttribute('role','tab');b.id='tab-'+t.id;
-    b.innerHTML=esc(t.label)+(t.hot?' <span class="hot">Tendance</span>':'')+'<span class="prog"></span>';
-    b.addEventListener('click',function(){userPicked=true;show(i);});
-    tabs.appendChild(b);
-  });
-  function show(i){
-    cur=i;var t=TOPICS[i];
-    tabs.querySelectorAll('.topic-tab').forEach(function(b,j){
-      b.setAttribute('aria-selected',String(j===i));b.tabIndex=j===i?0:-1;
-      var pr=b.querySelector('.prog');pr.classList.remove('run');void pr.offsetWidth;
-      if(j===i&&!userPicked&&!reduce&&visible)pr.classList.add('run');
-    });
-    var ab=tabs.children[i];if(tabs.scrollWidth>tabs.clientWidth)tabs.scrollTo({left:ab.offsetLeft-16,behavior:reduce?'auto':'smooth'});
-    panel.setAttribute('aria-labelledby','tab-'+t.id);
-    panel.innerHTML='<div><div class="eyebrow">Pourquoi c\'est d\'actualité</div><h3>'+esc(t.label)+'</h3><p class="why">'+t.why+'</p>'
-      +'<div class="kw">'+t.kw.map(function(k){return '<span>'+esc(k)+'</span>';}).join('')+'</div>'
-      +'<div class="topic-kpi"><span class="v">'+esc(t.kpi[0])+'</span><span class="l">'+esc(t.kpi[1])+'</span></div>'
-      +'<a href="#projets" class="btn btn-primary" data-go="'+t.id+'">Voir les projets liés →</a></div>'
-      +'<div><div class="eyebrow" style="margin-bottom:12px">Ce que j\'ai livré</div><ul class="proofs">'
-      +t.proofs.map(function(p){return '<li><b>'+esc(p[0])+'</b>'+esc(p[1])+'</li>';}).join('')+'</ul></div>';
-    panel.classList.remove('swap');void panel.offsetWidth;panel.classList.add('swap');
-    panel.querySelector('[data-go]').addEventListener('click',function(e){
-      e.preventDefault();userPicked=true;clearTimeout(timer);filterProjects(t.id);
-      document.getElementById('projets').scrollIntoView({behavior:reduce?'auto':'smooth'});
-      document.querySelectorAll('.project:not(.hidden)').forEach(function(p){p.classList.remove('lit');void p.offsetWidth;p.classList.add('lit');});
-    });
-    clearTimeout(timer);
-    if(!userPicked&&!reduce&&visible)timer=setTimeout(function(){show((cur+1)%TOPICS.length);},CYCLE);
-  }
-  tabs.addEventListener('keydown',function(e){
-    var k=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(!k)return;
-    userPicked=true;var n=(cur+k+TOPICS.length)%TOPICS.length;show(n);tabs.children[n].focus();
-  });
-  tabs.style.setProperty('--cycle',CYCLE+'ms');
-  show(0);
-  if('IntersectionObserver' in window){
-    new IntersectionObserver(function(es){es.forEach(function(e){visible=e.isIntersecting;if(!userPicked)show(cur);else clearTimeout(timer);});},{threshold:.35}).observe(document.getElementById('actualite'));
-  }
-
-  var io='IntersectionObserver' in window?new IntersectionObserver(function(es){
-    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');
-      e.target.querySelectorAll('.bar i').forEach(function(b){b.style.width=b.dataset.w+'%';});
-      e.target.querySelectorAll('[data-count]').forEach(count);
-      io.unobserve(e.target);}});
-  },{threshold:.12}):null;
-  document.querySelectorAll('.reveal').forEach(function(el){
-    if(io)io.observe(el);else{el.classList.add('in');el.querySelectorAll('.bar i').forEach(function(b){b.style.width=b.dataset.w+'%';});el.querySelectorAll('[data-count]').forEach(function(c){c.textContent=c.dataset.count;});}
-  });
-  document.getElementById('yr').textContent=new Date().getFullYear();
-
-  /* Méthode : la ligne se remplit à l'apparition (classe .in ajoutée par reveal) */
-
-  /* Calculateur */
-  var fmt=function(n,d){return n.toLocaleString('fr-FR',{maximumFractionDigits:d||0,minimumFractionDigits:d||0});};
-  function calc(){
-    var P=+cP.value,H=+cH.value,C=+cC.value,A=+cA.value;
-    [cP,cH,cC,cA].forEach(function(r){r.style.setProperty('--pct',((r.value-r.min)/(r.max-r.min)*100)+'%');});
-    oP.textContent=P;oH.textContent=H+' h';oC.textContent=C+' €';oA.textContent=A+' %';
-    var hours=P*H*45*A/100;
-    rH.textContent=fmt(Math.round(hours));rT.textContent=fmt(hours/1607,1);rE.textContent=fmt(Math.round(hours*C/50)*50);
-  }
-  var cP=document.getElementById('cP'),cH=document.getElementById('cH'),cC=document.getElementById('cC'),cA=document.getElementById('cA'),
-      oP=document.getElementById('oP'),oH=document.getElementById('oH'),oC=document.getElementById('oC'),oA=document.getElementById('oA'),
-      rH=document.getElementById('rH'),rT=document.getElementById('rT'),rE=document.getElementById('rE');
-  [cP,cH,cC,cA].forEach(function(r){r.addEventListener('input',calc);});calc();
-
-  /* Recommandations : ajoutez des entrées pour afficher la section
-     ex. {q:"Texte de la recommandation", n:"Prénom Nom", r:"Fonction, Entreprise"} */
-  var TESTIMONIALS=[];
-  if(TESTIMONIALS.length){
-    var qs=document.getElementById('quotes'),qi=0,qt;
-    qs.innerHTML=TESTIMONIALS.map(function(t,i){return '<figure class="quote'+(i?'':' on')+'"><blockquote>« '+esc(t.q)+' »</blockquote><cite><b>'+esc(t.n)+'</b> — '+esc(t.r)+'</cite></figure>';}).join('')
-      +(TESTIMONIALS.length>1?'<div class="qdots">'+TESTIMONIALS.map(function(t,i){return '<button aria-label="Recommandation '+(i+1)+'"'+(i?'':' aria-current="true"')+'></button>';}).join('')+'</div>':'');
-    function goQ(i){qi=i;qs.querySelectorAll('.quote').forEach(function(q,j){q.classList.toggle('on',j===i);});qs.querySelectorAll('.qdots button').forEach(function(b,j){b.setAttribute('aria-current',String(j===i));});}
-    qs.querySelectorAll('.qdots button').forEach(function(b,i){b.addEventListener('click',function(){clearInterval(qt);goQ(i);});});
-    if(TESTIMONIALS.length>1&&!reduce)qt=setInterval(function(){goQ((qi+1)%TESTIMONIALS.length);},7000);
-    document.getElementById('recommandations').hidden=false;
-  }
-
-  /* Spotlight qui suit la souris */
-  if(matchMedia('(hover:hover) and (pointer:fine)').matches){
-    document.addEventListener('pointermove',function(e){
-      var c=e.target.closest&&e.target.closest('.project,.offer,.exp,.note,.edu');if(!c)return;
-      var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px');
-    },{passive:true});
-  }
-
-  /* Assistant (réponses préparées, sans IA ni envoi de données) */
-  var BOOK=BOOKING_URL||'mailto:michael.belval@huxa.io';
-  var LINK_BOOK='<a href="'+BOOK+'" target="_blank" rel="noopener">réserver un appel de 30 min</a>';
-  var QA=[
+     proofs:[['ADSN Direct (Freshdesk)','Ticketing pour 100+ agents et toute la population notariale.'],
+             ["CRM groupe & sortie d'ERP","Premier pan du CRM groupe, zéro rupture de service à la sortie d'Adonix."],
+             ['Jira & Confluence cloud','Migration de toute la direction technique, backlogs et roadmap structurés.']]}
+  ],
+  /* Assistant : q = question proposée, k = mots-clés (début de mot), a = réponse. {BOOK} = lien de réservation. */
+  qa:[
     {q:'Qui êtes-vous ?',k:['qui','parcours','experience','expérience','profil','cv','presentation','présentez'],a:"Michaël Belval, ingénieur informatique (ISEN Toulon) et chef de projet senior. 18 ans d'expérience : ingénierie systèmes (Thales, Airbus, SFR, RATP), puis transformation digitale, data et IA depuis 2015. J'ai fondé Huxa Conseil pour accompagner les entreprises <a href=\"#parcours\">du besoin métier à la mise en production</a>."},
     {q:'Quelles missions proposez-vous ?',k:['mission','offre','service','proposez','faire pour','aider','prestation'],a:"Quatre formats : diagnostic IA & Data, du POC IA à la production, automatisation des processus, et chef de projet / Product Owner en mission. <a href=\"#offres\">Voir les offres</a>."},
-    {q:"Avez-vous mis de l'IA en production ?",k:['ia','intelligence','llm','genai','chatgpt','production','poc','dictanot','journal'],a:"Oui. DICTANOT, du POC au lancement commercial en janvier 2026 ; un POC regex + IA sur le Journal Officiel qui allège environ 2 ETP ; une base de référence immobilière en deep learning déployée dans le groupe. Et deux études arrêtées à temps faute de ROI."},
+    {q:"Avez-vous mis de l'IA en production ?",k:['ia','intelligence','llm','genai','chatgpt','production','poc','dictanot','journal'],a:"Oui. DICTANOT, du POC au lancement commercial en janvier 2026 ; un POC regex + IA sur le Journal Officiel qui libère environ 2 ETP de tâches répétitives au profit de missions à valeur ajoutée ; une base de référence immobilière en deep learning déployée dans le groupe. Et deux études arrêtées à temps faute de ROI."},
     {q:'Comment protégez-vous les données ?',k:['donnée','donnees','données','rgpd','souverain','confidential','securite','sécurité','ai act','cloud'],a:"Sur mon dernier poste, tout le périmètre data & IA était traité en interne, sans exposition à des services tiers. J'intègre RGPD et AI Act dès le cadrage, et un accord de confidentialité peut être signé dès le premier échange."},
     {q:'Où intervenez-vous ?',k:['intervenez','etes ou','ou etes','ou vous','ou travaill','situe','localis','deplac','sur site','zone','lieu','region','région','paca','marseille','aix','avignon','teletravail','télétravail','remote','distance'],a:"Sur site en PACA (Aix, Avignon, Marseille) et en télétravail partout ailleurs."},
     {q:'Quels outils maîtrisez-vous ?',k:['outil','stack','techno','n8n','power automate','dataiku','jira','salesforce','fresh','microsoft','365','api'],a:"Jira & Confluence, suite Freshworks, Salesforce, Microsoft 365 & Power Automate, Dataiku, n8n, API REST, Brevo… et l'IA appliquée (LLM, deep learning). <a href=\"#expertise\">Voir l'expertise</a>."},
-    {q:'Quels sont vos tarifs ?',k:['tarif','prix','cout','coût','tjm','budget','combien','devis'],a:"Forfait pour un diagnostic ou une automatisation au périmètre clair, taux journalier pour une mission en régie. Je fais une proposition chiffrée après un premier échange : vous pouvez "+LINK_BOOK+"."},
-    {q:'Êtes-vous disponible ?',k:['dispo','disponible','quand','demarr','démarr','commencer','start'],a:"Oui, je suis disponible pour de nouvelles missions, à temps plein ou partiel. Le plus simple : "+LINK_BOOK+"."},
-    {q:'Comment vous contacter ?',k:['contact','joindre','mail','email','appel','rdv','rendez','linkedin','telephone','téléphone'],a:"Vous pouvez "+LINK_BOOK+", m'écrire à <a href=\"mailto:michael.belval@huxa.io\">michael.belval@huxa.io</a> ou passer par <a href=\"https://www.linkedin.com/in/micha%C3%ABl-belval-90940841/\" target=\"_blank\" rel=\"noopener\">LinkedIn</a>."}
-  ];
-  var bot=document.getElementById('bot'),botBtn=document.getElementById('botBtn'),log=document.getElementById('botLog'),sugg=document.getElementById('botSugg'),bin=document.getElementById('botIn'),started=false;
-  function say(html,who){var d=document.createElement('div');d.className='msg '+who;d.innerHTML=html;log.appendChild(d);log.scrollTop=log.scrollHeight;}
-  function norm(t){return t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
-  function answer(text){
-    say(esc(text),'u');
-    var n=norm(text),best=null,score=0;
-    QA.forEach(function(x){var sc=x.k.reduce(function(a,k){return a+(new RegExp('(^|[^a-z0-9])'+norm(k).replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).test(n)?1:0);},0);if(sc>score){score=sc;best=x;}});
-    setTimeout(function(){say(best?best.a:"Bonne question ! Je n'ai pas de réponse toute prête, mais Michaël vous répondra directement : vous pouvez "+LINK_BOOK+" ou écrire à <a href=\"mailto:michael.belval@huxa.io\">michael.belval@huxa.io</a>.",'b');},reduce?0:350);
-  }
-  QA.forEach(function(x){var b=document.createElement('button');b.type='button';b.textContent=x.q;b.addEventListener('click',function(){answer(x.q);});sugg.appendChild(b);});
-  function toggleBot(open){
-    bot.hidden=!open;botBtn.setAttribute('aria-expanded',String(open));
-    if(open){if(!started){started=true;say("Bonjour 👋 Je réponds aux questions fréquentes sur le parcours et les offres de Michaël. Choisissez une question ou écrivez la vôtre.",'b');}bin.focus();}
-    else botBtn.focus();
-  }
-  botBtn.addEventListener('click',function(){toggleBot(bot.hidden);});
-  document.getElementById('botClose').addEventListener('click',function(){toggleBot(false);});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!bot.hidden)toggleBot(false);});
-  document.getElementById('botForm').addEventListener('submit',function(e){e.preventDefault();var v=bin.value.trim();if(v){answer(v);bin.value='';}});
-})();
+    {q:'Quels sont vos tarifs ?',k:['tarif','prix','cout','coût','tjm','budget','combien','devis'],a:"Forfait pour un diagnostic ou une automatisation au périmètre clair, taux journalier pour une mission en régie. Je fais une proposition chiffrée après un premier échange : vous pouvez {BOOK}."},
+    {q:'Êtes-vous disponible ?',k:['dispo','disponible','quand','demarr','démarr','commencer','start'],a:"Oui, je suis disponible pour de nouvelles missions, à temps plein ou partiel. Le plus simple : {BOOK}."},
+    {q:'Comment vous contacter ?',k:['contact','joindre','mail','email','appel','rdv','rendez','linkedin','telephone','téléphone'],a:"Vous pouvez {BOOK}, m'écrire à <a href=\"mailto:michael.belval@huxa.io\">michael.belval@huxa.io</a> ou passer par <a href=\"https://www.linkedin.com/in/micha%C3%ABl-belval-90940841/\" target=\"_blank\" rel=\"noopener\">LinkedIn</a>."}
+  ]
+};
 </script>
+<script src="app.js"></script>
 </body>
 </html>

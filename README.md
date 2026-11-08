@@ -31,3 +31,30 @@ Tout se règle en haut du `<script>` de `index.html` :
 
 Les articles de la section Notes sont dans `notes/`. Penser à ajouter chaque nouvel article dans `sitemap.xml`.
 L'image de partage (LinkedIn, WhatsApp…) est `og-image.jpg` (1200×630).
+
+## Version anglaise
+
+- `index.html` (FR) et `en/index.html` (EN) partagent `styles.css` (mise en forme) et `app.js` (interactions).
+- Les textes propres à chaque langue (sujets, assistant, calculateur…) sont dans le bloc `window.SITE` en bas de chaque page.
+- Après une modification de la page française, regénérer la page anglaise :
+
+  ```bash
+  python3 tools/i18n/build_en.py
+  ```
+
+  Le script signale les textes français sans traduction : les ajouter dans `tools/i18n/tr.py` (textes de la page) ou `tools/i18n/site_en.js` (textes dynamiques).
+- Les articles (`notes/`) et les pages légales restent en français ; la version anglaise y renvoie avec la mention « in French » / « (FR) ».
+
+## Logo et identité
+
+Le dossier `brand/` contient le logo Huxa Conseil (piste « Le pont » : un H dont la barre monte, du besoin métier à la mise en production).
+
+| Fichier | Usage |
+|---|---|
+| `huxa-icon.svg`, `huxa-icon-512.png`, `huxa-icon-400.png` | Icône sur fond bleu nuit (réseaux sociaux, page LinkedIn 400×400) |
+| `huxa-logo-on-light.svg/.png` | Logo complet sur fond clair (documents, signatures) |
+| `huxa-logo-on-dark.svg/.png` | Logo complet sur fond sombre |
+| `huxa-mark-on-light.svg`, `huxa-mark-on-dark.svg` (+ PNG 512) | Symbole seul, fond transparent |
+| `favicon-32.png`, `apple-touch-icon.png` | Icônes du site |
+
+Couleurs : bleu nuit `#0f1b3d`, orange `#ffb547` (fond sombre) / `#e8892b` (fond clair), rouille `#b25f0f`. Polices : Fraunces (nom), Inter (texte). Le nom est vectorisé dans les SVG : aucune police n'est nécessaire pour les afficher.
