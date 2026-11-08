@@ -20,7 +20,7 @@ window.SITE={
   topics:[
     {id:'ia',label:'Generative AI & LLMs',hot:true,
      why:"Companies are moving from demos to <b>real production use</b>. The challenge is no longer to try AI, but to industrialise it with <b>measurable ROI</b> and data you control.",
-     kpi:['~2 FTE','of low-value tasks removed by an AI POC validated by the business'],
+     kpi:['~2 FTE','of time given back to teams: repetitive tasks automated, expertise refocused on higher-value work'],
      kw:['LLM','Regex + AI','Deep learning','POC → production','ROI'],
      proofs:[['DICTANOT','From idea to market: POC, industrialisation and commercial launch in January 2026.'],
              ['Official Journal POC','Automatic analysis of publications (regex + AI), validated by the business.'],
@@ -59,7 +59,7 @@ window.SITE={
   qa:[
     {q:'Who are you?',k:['who','background','experience','profile','cv','resume','about','introduce'],a:"Michaël Belval, computer engineer (ISEN Toulon) and senior project manager. 18 years of experience: systems engineering (Thales, Airbus, SFR, RATP), then digital transformation, data and AI since 2015. I founded Huxa Conseil to help companies go <a href=\"#parcours\">from business need to production</a>."},
     {q:'What services do you offer?',k:['service','offer','mission','help','do you do','engagement','consult'],a:"Four formats: AI & Data assessment, from AI POC to production, process automation, and interim project manager / Product Owner. <a href=\"#offres\">See services</a>."},
-    {q:'Have you put AI into production?',k:['ai','artificial','llm','genai','chatgpt','production','poc','dictanot','journal','machine learning'],a:"Yes. DICTANOT, from POC to commercial launch in January 2026; a regex + AI POC on the French Official Journal that removes about 2 FTE of workload; a deep-learning real-estate reference database deployed across the group. And two studies stopped in time for lack of ROI."},
+    {q:'Have you put AI into production?',k:['ai','artificial','llm','genai','chatgpt','production','poc','dictanot','journal','machine learning'],a:"Yes. DICTANOT, from POC to commercial launch in January 2026; a regex + AI POC on the French Official Journal that frees up about 2 FTE of repetitive work for higher-value tasks; a deep-learning real-estate reference database deployed across the group. And two studies stopped in time for lack of ROI."},
     {q:'How do you protect data?',k:['data','gdpr','sovereign','confidential','security','secure','privacy','ai act','cloud','nda'],a:"In my last role, the entire data & AI scope was handled in-house, with no exposure to third-party services. I build GDPR and EU AI Act requirements in from the scoping phase, and an NDA can be signed from the first conversation."},
     {q:'Where do you work?',k:['where','location','located','based','on site','onsite','travel','france','provence','marseille','aix','avignon','remote','abroad','international','english'],a:"On site in the South of France (Aix, Avignon, Marseille) and remotely everywhere else, in French or English."},
     {q:'Which tools do you know?',k:['tool','stack','tech','n8n','power automate','dataiku','jira','salesforce','fresh','microsoft','365','api'],a:"Jira & Confluence, Freshworks suite, Salesforce, Microsoft 365 & Power Automate, Dataiku, n8n, REST APIs, Brevo… and applied AI (LLMs, deep learning). <a href=\"#expertise\">See expertise</a>."},
