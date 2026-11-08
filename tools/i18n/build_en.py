@@ -65,7 +65,7 @@ def attr(mo):
 body=re.sub(r'(alt|aria-label|placeholder|title)="([^"]+)"',attr,body)
 body=re.sub(r'<svgph (\d+)>',lambda m:svgs[int(m.group(1))],body)
 # paths
-for a,b in [('src="photo.jpg"','src="../photo.jpg"'),('src="photo-portrait.jpg"','src="../photo-portrait.jpg"'),('href="notes/','href="../notes/'),('href="mentions-legales.html"','href="../mentions-legales.html"'),('href="confidentialite.html"','href="../confidentialite.html"')]:
+for a,b in [('src="brand/','src="../brand/'),('href="brand/','href="../brand/'),('src="photo.jpg"','src="../photo.jpg"'),('src="photo-portrait.jpg"','src="../photo-portrait.jpg"'),('href="notes/','href="../notes/'),('href="mentions-legales.html"','href="../mentions-legales.html"'),('href="confidentialite.html"','href="../confidentialite.html"')]:
     body=body.replace(a,b)
 # mailto subjects
 from urllib.parse import quote,unquote
@@ -79,7 +79,7 @@ def mailto(mo):
     if 'body' in params: out+='&body='+quote("Hello Michaël,\n\nI'd like a 30-minute call about: \n\nMy availability: \n\nBest regards,")
     return 'mailto:michael.belval@huxa.io?'+out+'"'
 body=re.sub(r'mailto:michael\.belval@huxa\.io\?([^"]+)"',mailto,body)
-s=s[:bi]+body+open(os.path.join(SP,'site_en.js'),encoding='utf-8').read()+'</body>\n</html>\n'
+s=s[:bi].replace('href="brand/','href="../brand/')+body+open(os.path.join(SP,'site_en.js'),encoding='utf-8').read()+'</body>\n</html>\n'
 os.makedirs('en',exist_ok=True)
 open('en/index.html','w',encoding='utf-8').write(s)
 

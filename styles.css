@@ -40,7 +40,7 @@ section{padding:96px 0}
 .nav.scrolled{border-bottom-color:var(--line)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700}
-.logo span.mark{width:34px;height:34px;border-radius:10px;background:var(--navy);color:#ffb547;display:grid;place-items:center;font-size:.85rem;letter-spacing:.02em}
+.logo .mark{width:34px;height:34px;border-radius:9px;flex:0 0 auto;box-shadow:0 0 0 1px var(--line)}
 .nav ul{display:flex;gap:28px;list-style:none;align-items:center}
 .nav ul a{text-decoration:none;color:var(--ink-2);font-size:.93rem;font-weight:500}
 .nav ul a:hover{color:var(--ink)}
