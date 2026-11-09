@@ -79,7 +79,7 @@ def mailto(mo):
     if 'body' in params: out+='&body='+quote("Hello Michaël,\n\nI'd like a 30-minute call about: \n\nMy availability: \n\nBest regards,")
     return 'mailto:michael.belval@huxa.io?'+out+'"'
 body=re.sub(r'mailto:michael\.belval@huxa\.io\?([^"]+)"',mailto,body)
-s=s[:bi].replace('href="brand/','href="../brand/')+body+open(os.path.join(SP,'site_en.js'),encoding='utf-8').read()+'</body>\n</html>\n'
+s=s[:bi].replace('href="brand/','href="../brand/').replace('src="analytics.js"','src="../analytics.js"')+body+open(os.path.join(SP,'site_en.js'),encoding='utf-8').read()+'</body>\n</html>\n'
 os.makedirs('en',exist_ok=True)
 open('en/index.html','w',encoding='utf-8').write(s)
 

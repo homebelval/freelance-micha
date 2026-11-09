@@ -3,6 +3,19 @@
 (function(){
   var S=window.SITE||{},T=S.t||{};
   function esc(t){return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+  /* Mesure d'audience : événements envoyés à Matomo (voir analytics.js). Aucun texte saisi n'est transmis. */
+  var track=function(c,a,n){if(window.huxaTrack)window.huxaTrack(c,a,n);};
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a');if(!a)return;
+    var zone=(a.closest('section,header,footer,nav,aside')||{}).id||(a.closest('nav')?'menu':a.closest('footer')?'pied-de-page':'page');
+    var href=a.getAttribute('href')||'';
+    if(a.classList.contains('js-book'))track('Contact','Réserver un appel',zone);
+    else if(href.indexOf('mailto:')===0)track('Contact','E-mail',zone);
+    else if(href.indexOf('linkedin.com')>-1)track('Contact','LinkedIn',zone);
+    else if(a.dataset.lang)track('Langue','Changement',a.dataset.lang);
+    else if(a.classList.contains('note'))track('Notes','Lecture',a.getAttribute('href'));
+  },true);
+  document.querySelectorAll('.faq details').forEach(function(d){d.addEventListener('toggle',function(){if(d.open)track('FAQ','Question ouverte',d.querySelector('summary').textContent);});});
   var BOOKING_URL=S.bookingUrl||'';
   if(BOOKING_URL)document.querySelectorAll('.js-book').forEach(function(a){a.href=BOOKING_URL;a.target='_blank';a.rel='noopener';});
 
@@ -49,7 +62,7 @@
     });
   }
   document.querySelectorAll('.chip').forEach(function(c){
-    c.addEventListener('click',function(){filterProjects(c.dataset.f);});
+    c.addEventListener('click',function(){filterProjects(c.dataset.f);track('Réalisations','Filtre',c.dataset.f);});
   });
 
   /* Mot d'expertise qui défile */
@@ -78,7 +91,7 @@
   TOPICS.forEach(function(t,i){
     var b=document.createElement('button');b.className='topic-tab';b.setAttribute('role','tab');b.id='tab-'+t.id;
     b.innerHTML=esc(t.label)+(t.hot?' <span class="hot">'+esc(T.trending)+'</span>':'')+'<span class="prog"></span>';
-    b.addEventListener('click',function(){userPicked=true;show(i);});
+    b.addEventListener('click',function(){userPicked=true;show(i);track('Sujets','Onglet',t.id);});
     tabs.appendChild(b);
   });
   function show(i){
@@ -98,7 +111,7 @@
       +t.proofs.map(function(p){return '<li><b>'+esc(p[0])+'</b>'+esc(p[1])+'</li>';}).join('')+'</ul></div>';
     panel.classList.remove('swap');void panel.offsetWidth;panel.classList.add('swap');
     panel.querySelector('[data-go]').addEventListener('click',function(e){
-      e.preventDefault();userPicked=true;clearTimeout(timer);filterProjects(t.id);
+      e.preventDefault();userPicked=true;clearTimeout(timer);filterProjects(t.id);track('Sujets','Voir les projets liés',t.id);
       document.getElementById('projets').scrollIntoView({behavior:reduce?'auto':'smooth'});
       document.querySelectorAll('.project:not(.hidden)').forEach(function(p){p.classList.remove('lit');void p.offsetWidth;p.classList.add('lit');});
     });
@@ -142,7 +155,8 @@
     var hours=P*H*45*A/100;
     rH.textContent=fmt(Math.round(hours));rT.textContent=fmt(hours/1607,1);rE.textContent=fmt(Math.round(hours*C/50)*50);
   }
-  if(cP){[cP,cH,cC,cA].forEach(function(r){r.addEventListener('input',calc);});calc();}
+  var calcUsed=false;
+  if(cP){[cP,cH,cC,cA].forEach(function(r){r.addEventListener('input',calc);r.addEventListener('change',function(){if(!calcUsed){calcUsed=true;track('Calculateur','Utilisé');}});});calc();}
 
   /* Recommandations : la section reste masquée tant que la liste est vide */
   var TESTIMONIALS=S.testimonials||[];
@@ -176,12 +190,13 @@
     say(esc(text),'u');
     var n=norm(text),best=null,score=0;
     QA.forEach(function(x){var sc=x.k.reduce(function(a,k){return a+(new RegExp('(^|[^a-z0-9])'+norm(k).replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).test(n)?1:0);},0);if(sc>score){score=sc;best=x;}});
+    track('Assistant',best?'Question reconnue':'Question sans réponse',best?best.q:'');
     setTimeout(function(){say(fill(best?best.a:T.botFallback),'b');},reduce?0:350);
   }
   QA.forEach(function(x){var b=document.createElement('button');b.type='button';b.textContent=x.q;b.addEventListener('click',function(){answer(x.q);});sugg.appendChild(b);});
   function toggleBot(open){
     bot.hidden=!open;botBtn.setAttribute('aria-expanded',String(open));
-    if(open){if(!started){started=true;say(fill(T.botHello),'b');}bin.focus();}
+    if(open){if(!started){started=true;say(fill(T.botHello),'b');track('Assistant','Ouvert');}bin.focus();}
     else botBtn.focus();
   }
   botBtn.addEventListener('click',function(){toggleBot(bot.hidden);});
