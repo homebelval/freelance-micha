@@ -197,7 +197,10 @@
   QA.forEach(function(x){var b=document.createElement('button');b.type='button';b.textContent=x.q;b.addEventListener('click',function(){answer(x.q);});sugg.appendChild(b);});
   function toggleBot(open){
     bot.hidden=!open;botBtn.setAttribute('aria-expanded',String(open));
-    if(open){if(!started){started=true;say(fill(T.botHello),'b');track('Assistant','Ouvert');}bin.focus();}
+    var small=matchMedia('(max-width:760px)').matches;document.body.classList.toggle('bot-open',open&&small);
+    if(open){if(!started){started=true;say(fill(T.botHello),'b');track('Assistant','Ouvert');}
+      /* Sur écran tactile, pas de focus automatique : le clavier masquerait les questions proposées */
+      if(matchMedia('(pointer:coarse)').matches)document.getElementById('botClose').focus({preventScroll:true});else bin.focus();}
     else botBtn.focus();
   }
   botBtn.addEventListener('click',function(){toggleBot(bot.hidden);});
