@@ -11,6 +11,7 @@
     var href=a.getAttribute('href')||'';
     if(a.classList.contains('js-book'))track('Contact','Réserver un appel',zone);
     else if(href.indexOf('mailto:')===0)track('Contact','E-mail',zone);
+    else if(href.indexOf('tel:')===0)track('Contact','Téléphone',zone);
     else if(href.indexOf('linkedin.com')>-1)track('Contact','LinkedIn',zone);
     else if(a.dataset.lang)track('Langue','Changement',a.dataset.lang);
     else if(a.classList.contains('note'))track('Notes','Lecture',a.getAttribute('href'));

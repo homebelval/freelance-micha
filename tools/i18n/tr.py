@@ -242,7 +242,7 @@ TR = {
 "Un projet de transformation, de data ou d'IA à piloter&nbsp;?":'A transformation, data or AI project to lead?',
 'Avec Huxa Conseil, je suis disponible pour de nouvelles missions en région PACA ou en télétravail. Parlons de votre besoin.':"With Huxa Conseil, I'm available for new projects in the South of France or remotely. Let's talk about your needs.",
 'Huxa Conseil · Michaël Belval EI — Transformation Digitale, IA &amp; Automatisation':'Huxa Conseil · Michaël Belval EI — Digital Transformation, AI &amp; Automation',
-'Mentions légales':'Legal notice (FR)','Confidentialité':'Privacy (FR)','Retour en haut ↑':'Back to top ↑',
+'Mentions légales':'Legal notice (FR)','06&nbsp;51&nbsp;91&nbsp;77&nbsp;32':'+33&nbsp;6&nbsp;51&nbsp;91&nbsp;77&nbsp;32','Confidentialité':'Privacy (FR)','Retour en haut ↑':'Back to top ↑',
 'Une question&nbsp;?':'Any questions?','Réponses préparées par Michaël':'Answers prepared by Michaël',
 # attributes
 'Changer de thème':'Toggle theme','Ouvrir le menu':'Open menu','Filtrer les projets':'Filter projects','Fermer':'Close',
