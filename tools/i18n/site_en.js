@@ -65,7 +65,7 @@ window.SITE={
     {q:'Which tools do you know?',k:['tool','stack','tech','n8n','power automate','dataiku','jira','salesforce','fresh','microsoft','365','api'],a:"Jira & Confluence, Freshworks suite, Salesforce, Microsoft 365 & Power Automate, Dataiku, n8n, REST APIs, Brevo… and applied AI (LLMs, deep learning). <a href=\"#expertise\">See expertise</a>."},
     {q:'What are your rates?',k:['rate','price','pricing','cost','fee','budget','how much','quote','daily'],a:"Fixed price for an assessment or a well-scoped automation, daily rate for an interim engagement. I send a costed proposal after a first call: you can {BOOK}."},
     {q:'Are you available?',k:['available','availability','when','start','begin','free'],a:"Yes, I'm available for new projects, full-time or part-time. The easiest way: {BOOK}."},
-    {q:'How can I contact you?',k:['contact','reach','mail','email','call','meeting','appointment','linkedin','phone'],a:"You can {BOOK}, e-mail me at <a href=\"mailto:michael.belval@huxa.io\">michael.belval@huxa.io</a> or reach out on <a href=\"https://www.linkedin.com/in/micha%C3%ABl-belval-90940841/\" target=\"_blank\" rel=\"noopener\">LinkedIn</a>."}
+    {q:'How can I contact you?',k:['contact','reach','mail','email','call','meeting','appointment','linkedin','phone'],a:"You can {BOOK}, call me on <a href=\"tel:+33651917732\">+33 6 51 91 77 32</a>, e-mail me at <a href=\"mailto:michael.belval@huxa.io\">michael.belval@huxa.io</a> or reach out on <a href=\"https://www.linkedin.com/in/micha%C3%ABl-belval-90940841/\" target=\"_blank\" rel=\"noopener\">LinkedIn</a>."}
   ]
 };
 </script>
